@@ -1,3 +1,3 @@
 class Video < ActiveRecord::Base
-  belongs_to :post
+  belongs_to :videoable, polymorphic: true
 end

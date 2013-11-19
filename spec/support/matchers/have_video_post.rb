@@ -3,12 +3,13 @@ RSpec::Matchers.define :have_video_post do |post|
 
   match do |page|
     id = "##{dom_id(post)}"
-    node = page.find(id)
+    node = page.all(id).first
 
     expect(page).to(have_post(post)) &&
+    node.present? &&
     post.videos.present? &&
-    post.videos.all?{|video| 
-      node.all("iframe.video[src=#{video.url}]").present?
+    post.videos.all?{|video|
+      node.all(".video[src='#{video.url}']").present?
     }
   end
 

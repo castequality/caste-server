@@ -15,6 +15,13 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
+  [
+    ActionView::Helpers::TranslationHelper,
+    ActionView::RecordIdentifier
+  ].each do |mixin|
+    config.include mixin, type: :feature
+  end
+
   # config.fail_fast = true
   config.infer_base_class_for_anonymous_controllers = false
   config.order = 'random'

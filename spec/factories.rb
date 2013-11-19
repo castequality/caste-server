@@ -8,13 +8,11 @@ FactoryGirl.define do
     sequence(:title) {|n| "Test Title ##{n}" }
 
     body "This is an interesting body post!"
-    published_at { Time.now }
 
-    trait :published do
-    end
+    published_at { 1.week.ago }
 
     trait :unpublished do
-      published_at nil
+      published_at { 1.week.from_now }
     end
 
     trait :with_photos do
@@ -26,8 +24,8 @@ FactoryGirl.define do
         video_count 5
       end
 
-      after(:create) do |user, evaluator|
-        create_list(:video, evaluator.video_count)
+      after(:create) do |post, evaluator|
+        create_list(:video, evaluator.video_count, videoable: post)
       end
     end
   end

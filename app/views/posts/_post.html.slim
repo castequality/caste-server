@@ -4,7 +4,7 @@
       h1.title
         = post.title
       span.published-at
-        = post.published_at
+        = l post.published_at, format: :post
 
     = video_tags_for post.videos do |video|
       iframe.video src=video.url

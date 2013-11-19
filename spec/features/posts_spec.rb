@@ -18,7 +18,7 @@ feature 'Posts page' do
   end
 
   scenario 'display a post with videos' do
-    with_video = create :post_with_videos, video_count: 2
+    with_video = create :post_with_videos, video_count: 1
 
     visit posts_path
 
