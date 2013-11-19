@@ -1,0 +1,12 @@
+development: &default
+  adapter: postgresql
+  database: caste-server_development
+  encoding: utf8
+  min_messages: warning
+  port: <%= ENV['BOXEN_POSTGRESQL_PORT'] || ENV['DB_PORT'] || 5432 %>
+  pool: 5
+  timeout: 5000
+
+test:
+  <<: *default
+  database: caste-server_test

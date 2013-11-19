@@ -1,0 +1,13 @@
+- cache post do  
+  article.post id=dom_id(post)
+    header
+      h1.title
+        = post.title
+      span.published-at
+        = post.published_at
+
+    = video_tags_for post.videos do |video|
+      iframe.video src=video.url
+
+    p.body
+      = post.body
