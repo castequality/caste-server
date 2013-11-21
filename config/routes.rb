@@ -1,5 +1,8 @@
 CasteServer::Application.routes.draw do
+  resource  :contact
   resources :posts
+  resources :projects
+  resources :visuals
 
-  root to: 'featured#show'
+  root to: 'features#index'
 end

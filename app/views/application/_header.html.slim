@@ -1,0 +1,8 @@
+= link_to nil, posts_path, id: "home-link"
+= link_to nil, contact_path, id: "contact-link"
+= link_to nil, store_url, id: "store-link"
+= link_to nil, visuals_path, id: "visuals-link"
+= link_to nil, projects_path, id: "projects-link"
+
+= link_to featured_project_path, id: "banner" do
+  = image_tag featured_project.banner.url(:banner)

@@ -9,6 +9,5 @@ class CreateVideos < ActiveRecord::Migration
     end
 
     add_index :videos, :url, unique: true
-    add_index :videos, [:videoable_id, :videoable_type], unique: true
   end
 end

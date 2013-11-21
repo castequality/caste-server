@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Splash page' do
-  given(:feature) { build :feature }
+  given(:feature) { build :featured_feature }
 
   background do
     feature.save!

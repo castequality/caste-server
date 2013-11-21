@@ -11,3 +11,6 @@
 
     p.body
       = post.body
+
+    = photo_tags_for post.photos do |photo|
+      = image_tag photo.file.url(:medium), class: "photo"
