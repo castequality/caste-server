@@ -5,6 +5,7 @@ class CreatePhotos < ActiveRecord::Migration
 
       t.integer :imageable_id
       t.string :imageable_type
+      t.string :url
 
       t.attachment :file
 
