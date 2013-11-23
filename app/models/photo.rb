@@ -10,6 +10,6 @@ class Photo < ActiveRecord::Base
       }
 
   def url(*args)
-    super || file.url(args)
+    super() || file.url(*args)
   end
 end
