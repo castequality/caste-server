@@ -19,17 +19,16 @@ class LoadsFromTumblr
   private
     def for_all_posts(&block)
       loaded = 0
-      while(blog = client.posts(url, type: :text, limit: 20, offset: loaded) and
-            loaded < blog["total_posts"])
+      while(blog = posts_after(loaded) and loaded < blog["total_posts"])
         blog["posts"].each do |post|
-          yield post.with_indifferent_access
+          yield post.with_indifferent_access if block_given?
         end
         loaded = loaded + 1
       end
     end
 
-    def response
-      client.posts(url, type: :text, limit: 20)
+    def posts_after(offset = 0)
+      client.posts(url, type: :text, limit: 20, offset: offset)
     end
 
     def url
