@@ -1,6 +1,9 @@
 include ActionDispatch::TestProcess
 
 FactoryGirl.define do
+  sequence(:name) {|n| "Test #{n}" }
+  sequence(:url) {|n| "http://example.com/#{n}"}
+
   factory :feature do
     video
 
@@ -10,7 +13,7 @@ FactoryGirl.define do
   end
 
   factory :post do
-    sequence(:title) {|n| "Test Title ##{n}" }
+    name
 
     body "This is an interesting body post!"
 
@@ -42,6 +45,8 @@ FactoryGirl.define do
   end
 
   factory :project do
+    name
+
     association :banner, factory: :photo
     association :banner_hover, factory: :photo
 
@@ -56,7 +61,12 @@ FactoryGirl.define do
     file_file_size    { 1024 }
   end
 
+  factory :visual do
+    source "blog"
+    url
+  end
+
   factory :video do
-    sequence(:url) {|n| "http://www.youtube.com/embed/iFaKN98Xg3#{n}"}
+    url
   end
 end
