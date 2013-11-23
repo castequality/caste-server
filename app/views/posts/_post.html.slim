@@ -10,7 +10,7 @@
       iframe.video src=video.url
 
     p.body
-      = post.body
+      = post.body.html_safe
 
     = photo_tags_for post.photos do |photo|
       = image_tag photo.file.url(:medium), class: "photo"

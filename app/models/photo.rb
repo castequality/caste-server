@@ -8,4 +8,8 @@ class Photo < ActiveRecord::Base
         large: "1024x1024>",
         banner: "750x118#"
       }
+
+  def url(*args)
+    super || file.url(args)
+  end
 end
