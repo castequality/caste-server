@@ -16,6 +16,7 @@ RSpec.configure do |config|
   end
 
   [
+    FeaturesHelper,
     ActionView::Helpers::TranslationHelper,
     ActionView::RecordIdentifier
   ].each do |mixin|

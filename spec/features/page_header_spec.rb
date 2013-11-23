@@ -1,10 +1,6 @@
 require "spec_helper"
 
 feature "The page header" do
-  def link_for(route)
-    find("##{route}-link")
-  end
-
   scenario "has the banner for the most recent project" do
     project = create :featured_project
 
@@ -27,13 +23,11 @@ feature "The page header" do
     expect(link_for(:store)).to match_store_link
   end
 
-  %w[projects visuals contact].each do |route|
+  %w[projects visuals contact stockists].each do |route|
     scenario "contains the #{route} link to the #{route} page" do
       visit posts_path
 
-      link_for(route).click
-
-      expect(current_path).to eq __send__("#{route}_path")
+      expect(page).to have_link_for route
     end
   end
 end

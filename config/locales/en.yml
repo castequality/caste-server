@@ -4,6 +4,14 @@ en:
       default: '%m/%d/%Y'
       with_weekday: '%a %m/%d/%y'
 
+  header:
+    links:
+      contact: "contact"
+      projects: "projects"
+      store: "store"
+      stockists: "stockists"
+      visuals: "visuals"
+
   time:
     formats:
       default: '%a, %b %-d, %Y at %r'
