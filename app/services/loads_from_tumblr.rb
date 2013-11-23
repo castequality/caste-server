@@ -5,9 +5,9 @@ class LoadsFromTumblr
 
   def load!
     for_all_posts do |post|
-      if Post.find_by(title: post[:title]).nil?
+      if Post.find_by(name: post[:title]).nil?
         Post.create({
-          title: post[:title],
+          name: post[:title],
           body: post[:body],
           created_at: post[:date],
           published_at: post[:state] == "published" ? post[:date] : nil

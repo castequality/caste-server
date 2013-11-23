@@ -4,7 +4,7 @@ RSpec::Matchers.define :have_post do |post|
     node = page.all(id).first
 
     node.present? &&
-    node.find('.title').text == post.title &&
+    node.find('.name').text == post.name &&
     node.find('.body').text == post.body &&
     node.find('.published-at').text == l(post.published_at, format: :post)
   end

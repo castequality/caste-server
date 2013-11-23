@@ -1,9 +1,9 @@
 = link_to nil, posts_path, id: "home-link"
-= link_to t("header.links.projects"), projects_path, id: "projects-link"
-= link_to t("header.links.visuals"), visuals_path, id: "visuals-link"
-= link_to t("header.links.stockists"), stockists_path, id: "stockists-link"
-= link_to t("header.links.contact"), contact_path, id: "contact-link"
-= link_to t("header.links.store"), store_url, id: "store-link"
+= header_link_to :projects
+= header_link_to :visuals
+= header_link_to :stockists
+= header_link_to :contact
+= header_link_to :store, store_url
 
 = link_to featured_project_path, id: "banner" do
   = image_tag featured_project.banner.url(:banner)

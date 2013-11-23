@@ -7,6 +7,13 @@ module ApplicationHelper
     project_path(featured_project)
   end
 
+  def header_link_to(route, link_path = nil)
+    link_text = t("header.links.#{route}")
+    link_path ||= __send__("#{route}_path")
+
+    link_to link_text, link_path, id: "#{route}-link"
+  end
+
   def photo_tags_for(photos = [], **opts)
     if photos.present? && block_given?
       with_output_buffer do
