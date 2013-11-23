@@ -1,2 +1,4 @@
-class ContactsController < InheritedResources::Base
+class ContactsController < ApplicationController
+  def show
+  end
 end

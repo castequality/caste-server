@@ -1,6 +1,6 @@
-FactoryGirl.define do
-  PHOTO_FILE = File.new("./spec/support/files/photo.jpg")
+include ActionDispatch::TestProcess
 
+FactoryGirl.define do
   factory :feature do
     video
 
@@ -42,8 +42,8 @@ FactoryGirl.define do
   end
 
   factory :project do
-    association :banner, factory: [:photo, :banner]
-    association :banner_hover, factory: [:photo, :banner_hover]
+    association :banner, factory: :photo
+    association :banner_hover, factory: :photo
 
     factory :featured_project do
       featured true
@@ -51,13 +51,9 @@ FactoryGirl.define do
   end
 
   factory :photo do
-    file PHOTO_FILE
-
-    trait :banner do
-    end
-
-    trait :banner_hover do
-    end
+    file_file_name    { "spec/support/filesphoto.jpg" }
+    file_content_type { "image/jpeg" }
+    file_file_size    { 1024 }
   end
 
   factory :video do

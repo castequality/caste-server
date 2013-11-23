@@ -1,2 +1,4 @@
-class VisualsController < InheritedResources::Base
+class VisualsController < ApplicationController
+  def index
+  end
 end

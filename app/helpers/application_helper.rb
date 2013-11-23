@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def featured_project_path
-    projects_path(featured: true)
+    project_path(featured_project)
   end
 
   def photo_tags_for(photos = [], **opts)
