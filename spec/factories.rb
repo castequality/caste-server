@@ -61,8 +61,12 @@ FactoryGirl.define do
     file_file_size    { 1024 }
   end
 
+  factory :source do
+    name "blog"
+  end
+
   factory :visual do
-    source "blog"
+    source
     url
   end
 

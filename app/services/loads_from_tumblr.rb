@@ -1,10 +1,10 @@
 class LoadsFromTumblr
   def initialize(blog_name)
-    @blog_name = blog_name
+    @loader = LoadsAllPosts.new(blog_name)
   end
 
   def load!
-    for_all_posts do |post|
+    @loader.load!(type: :text) do |post|
       if Post.find_by(name: post[:title]).nil?
         Post.create({
           name: post[:title],
@@ -15,27 +15,4 @@ class LoadsFromTumblr
       end
     end
   end
-
-  private
-    def for_all_posts(&block)
-      loaded = 0
-      while(blog = posts_after(loaded) and loaded < blog["total_posts"])
-        blog["posts"].each do |post|
-          yield post.with_indifferent_access if block_given?
-        end
-        loaded = loaded + 1
-      end
-    end
-
-    def posts_after(offset = 0)
-      client.posts(url, type: :text, limit: 20, offset: offset)
-    end
-
-    def url
-      "#{@blog_name}.tumblr.com"
-    end
-
-    def client
-      Tumblr::Client.new
-    end
 end
