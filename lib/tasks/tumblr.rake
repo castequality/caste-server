@@ -1,8 +1,11 @@
 namespace :tumblr do
   desc "Loads posts from tumblr"
   task posts: :environment do
-    loadsPosts = LoadsFromTumblr.new("casteblog")
+    LoadsFromTumblr.new("casteblog").load!
+  end
 
-    loadsPosts.load!
+  desc "Loads visuals from tumblr"
+  task visuals: :environment do
+    SyncsVisualsJob.enqueue
   end
 end
