@@ -1,0 +1,17 @@
+$visuals-left-margin: $page-left-margin;
+
+$visual-width: 217px;
+$visual-margin: 4px;
+
+.visuals {
+  margin-left: $visuals-left-margin;
+
+  @include columns($visual-width);
+  @include column-gap($visual-margin);
+}
+
+.visual {
+  @include size($visual-width auto);
+
+  display: inline-block;
+}

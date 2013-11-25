@@ -1,0 +1,7 @@
+$posts-width: 524px;
+
+.posts {
+  @include size($posts-width 100%);
+
+  overflow: hidden;
+}

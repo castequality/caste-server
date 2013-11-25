@@ -1,7 +1,7 @@
 $header-size: 118px;
 $header-margin: 20px;
 
-$pages-width: 72px;
+$pages-width: $page-left-margin - $header-margin;
 $pages-margin: 12px;
 
 $banner-width: 750px;
