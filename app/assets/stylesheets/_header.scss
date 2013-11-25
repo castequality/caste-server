@@ -1,0 +1,73 @@
+$header-size: 118px;
+$header-margin: 20px;
+
+$pages-width: 72px;
+$pages-margin: 12px;
+
+$banner-width: 750px;
+
+.header {
+  @include size(100% $header-size);
+  margin: {
+    left: 0;
+    top: $header-margin;
+    right: $header-margin;
+    bottom: $header-margin;
+  }
+
+  .pages, .brand-logo, .banner {
+    float: left;
+    margin-right: $header-margin;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.pages {
+  @include size($pages-width 100%);
+
+  text-align: right;
+
+  .page-link {
+    height: 18px;
+
+    &:first-of-type {
+      margin-top: $pages-margin;
+    }
+
+    &:last-of-type {
+      margin-bottom: $pages-margin;
+    }
+  }
+}
+
+.page-link {
+  display: block;
+  font-weight: 700;
+  font-variant: small-caps;
+}
+
+.banner {
+  @include size($banner-width 100%);
+
+  display: block;
+}
+
+.brand-logo {
+  @include size($header-size);
+
+  display: block;
+  overflow: hidden;
+
+  background: {
+    image: image-url("logo-hover.jpg");
+    size: $header-size;
+    position: center;
+  }
+
+  img:hover {
+    opacity: 0;
+  }
+}

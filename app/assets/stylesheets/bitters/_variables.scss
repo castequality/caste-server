@@ -1,9 +1,9 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
 $sans-serif: $helvetica;
-$serif: $georgia;
+$serif: Courier New, Courier, $georgia;
 
-$base-font-family: $sans-serif;
+$base-font-family: $serif;
 $header-font-family: $base-font-family;
 
 // Sizes
@@ -28,8 +28,8 @@ $base-font-color: $dark-gray;
 $base-accent-color: $blue;
 
 //  Text Link Colors
-$base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$base-link-color: darken($base-font-color, 25);
+$hover-link-color: lighten($base-link-color, 30);
 
 // Border color
 $base-border-color: $light-gray;

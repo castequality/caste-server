@@ -7,10 +7,10 @@ en:
   header:
     links:
       contact: "contact"
-      projects: "projects"
+      projects: "project"
       store: "store"
       stockists: "stockists"
-      visuals: "visuals"
+      visuals: "visual"
 
   time:
     formats:
