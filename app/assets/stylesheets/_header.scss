@@ -1,7 +1,6 @@
 $header-size: 118px;
-$header-margin: 20px;
 
-$pages-width: $page-left-margin - $header-margin;
+$pages-width: $page-left-margin - $element-margin;
 $pages-margin: 12px;
 
 $banner-width: 750px;
@@ -10,14 +9,14 @@ $banner-width: 750px;
   @include size(100% $header-size);
   margin: {
     left: 0;
-    top: $header-margin;
-    right: $header-margin;
-    bottom: $header-margin;
+    top: $element-margin;
+    right: $element-margin;
+    bottom: $element-margin;
   }
 
   .pages, .brand-logo, .banner {
     float: left;
-    margin-right: $header-margin;
+    margin-right: $element-margin;
 
     &:last-child {
       margin-right: 0;

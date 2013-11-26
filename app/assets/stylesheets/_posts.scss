@@ -5,3 +5,13 @@ $posts-width: 524px;
 
   overflow: hidden;
 }
+
+.blog {
+  .posts, .visuals-small {
+    float: left;
+    margin-right: $element-margin;
+  }
+  &:last-child {
+    margin-right: auto;
+  }
+}

@@ -8,10 +8,16 @@ $visual-margin: 4px;
 
   @include columns($visual-width);
   @include column-gap($visual-margin);
+
+  .visual {
+    @include size($visual-width auto);
+
+    display: inline-block;
+  }
 }
 
-.visual {
-  @include size($visual-width auto);
+.visuals-small {
+  width: $header-size;
 
-  display: inline-block;
+  margin-left: $visuals-left-margin;
 }

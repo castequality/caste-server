@@ -66,8 +66,16 @@ FactoryGirl.define do
   end
 
   factory :visual do
-    source
-    url
+    photo     { generate :url }
+    thumbnail { generate :url }
+
+    trait :imported do
+      source
+    end
+
+    trait :original do
+      source { nil }
+    end
   end
 
   factory :video do

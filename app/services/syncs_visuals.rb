@@ -6,14 +6,16 @@ class SyncsVisuals
   def sync!
     for_each_source do |source, visual|
       photo = visual["photos"].first || {}
-      url = (photo["alt_sizes"].first || {})["url"]
+      sizes = photo["alt_sizes"]
+      large = sizes.first["url"]
+      thumbnail = sizes[2]["url"]
 
-      unless Visual.find_by(url: url).present?
-        Visual.create({
+      unless Visual.find_by(photo: large).present?
+        Visual.create \
           source: source,
           caption: photo["caption"],
-          url: url
-        })
+          photo: large,
+          thumbnail: thumbnail
       end
     end
   end
