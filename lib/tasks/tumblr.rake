@@ -11,6 +11,6 @@ namespace :tumblr do
 
   desc "Loads visuals from tumblr"
   task visuals: :environment do
-    SyncsVisualsJob.enqueue
+    SyncsVisuals.new(Source.all).sync!
   end
 end

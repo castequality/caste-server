@@ -30,7 +30,6 @@ gem 'tumblr_client'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'unicorn'
-gem 'workless'
 
 group :development do
   gem 'better_errors'

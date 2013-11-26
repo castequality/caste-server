@@ -4,3 +4,7 @@ body {
   width: $page-width;
   margin: auto;
 }
+
+.content {
+  margin-left: $page-left-margin;
+}

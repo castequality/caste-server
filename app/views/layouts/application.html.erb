@@ -9,8 +9,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'header' %>
   <%= render 'flashes' -%>
-  <%= yield %>
+  <%= render 'header' %>
+  <div class="content">
+    <%= yield %>
+  </div>
 </body>
 </html>
