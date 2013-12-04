@@ -29,7 +29,7 @@ FactoryGirl.define do
       end
 
       after(:create) do |post, evaluator|
-        create_list(:photo, evaluator.photo_count, imageable: post)
+        create_list(:photo, evaluator.photo_count, contentable: post)
       end
     end
 
@@ -39,7 +39,7 @@ FactoryGirl.define do
       end
 
       after(:create) do |post, evaluator|
-        create_list(:video, evaluator.video_count, videoable: post)
+        create_list(:video, evaluator.video_count, contentable: post)
       end
     end
   end

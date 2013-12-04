@@ -25,7 +25,7 @@ module CasteServer
       generate.view_specs false
     end
 
-    %w[jobs services].each do |loaded|
+    %w[services].each do |loaded|
       config.autoload_paths << File.join(Rails.root, 'app', loaded)
     end
 

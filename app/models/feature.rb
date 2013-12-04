@@ -1,7 +1,7 @@
 class Feature < ActiveRecord::Base
   delegate :url, to: :video, prefix: true, allow_nil: true
 
-  has_one :video, as: :videoable
+  has_one :video, as: :contentable
 
   default_scope { order('id desc') }
 

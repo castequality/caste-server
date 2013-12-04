@@ -3,8 +3,9 @@ class CreatePhotos < ActiveRecord::Migration
     create_table :photos do |t|
       t.string :caption
 
-      t.integer :imageable_id
-      t.string :imageable_type
+      t.integer :contentable_id
+      t.string :contentable_type
+      t.integer :ordinal, null: false, default: 0
       
       t.string :url
 

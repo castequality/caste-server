@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  belongs_to :imageable, polymorphic: true
+  include Content
 
   has_attached_file :file,
       styles: {

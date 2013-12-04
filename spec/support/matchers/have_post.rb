@@ -1,7 +1,6 @@
 RSpec::Matchers.define :have_post do |post|
   match do |page|
-    id = "##{dom_id(post)}"
-    node = page.all(id).first
+    node = page.all("##{dom_id(post)}").first
 
     node.present? &&
     node.find('.name').text == post.name &&

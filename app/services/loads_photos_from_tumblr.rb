@@ -1,10 +1,10 @@
 class LoadsPhotosFromTumblr
   def initialize(blog_name)
-    @blog_name = blog_name
+    @loader = LoadsAllPosts.new(@blog_name)
   end
 
   def load!
-    LoadsAllPosts.new(@blog_name).load!(type: :photo) do |photo_from_blog|
+    @loader.load!(type: :photo) do |photo_from_blog|
       photo = photo_from_blog["photos"].first || {}
       sizes = photo["alt_sizes"]
       large = sizes.first["url"]

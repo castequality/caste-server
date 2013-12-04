@@ -1,3 +1,3 @@
 class Video < ActiveRecord::Base
-  belongs_to :videoable, polymorphic: true
+  include Content
 end

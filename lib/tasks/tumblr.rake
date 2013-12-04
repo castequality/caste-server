@@ -9,6 +9,11 @@ namespace :tumblr do
     LoadsPhotosFromTumblr.new("castequality").load!
   end
 
+  desc "Loads projects from tumblr"
+  task projects: :environment do
+    LoadsProjectsFromTumblr.new("casteproject").load!
+  end
+
   desc "Loads visuals from tumblr"
   task visuals: :environment do
     SyncsVisuals.new(Source.all).sync!
