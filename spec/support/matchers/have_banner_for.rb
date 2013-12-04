@@ -4,7 +4,8 @@ RSpec::Matchers.define :have_banner_for do |project|
 
     banner.present? &&
     banner['href'] == project_path(project) &&
-    banner.find('img')['src'] == project.banner.url(:banner)
+    banner.find('.project-banner')['src'] == project.banner &&
+    banner.find('.project-banner-hover')['src'] == project.banner_hover
   end
 
   failure_message_for_should do |page|

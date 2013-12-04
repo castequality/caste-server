@@ -2,7 +2,13 @@ include ActionDispatch::TestProcess
 
 FactoryGirl.define do
   sequence(:name) {|n| "Test #{n}" }
-  sequence(:url) {|n| "http://example.com/#{n}"}
+  sequence(:url)  {|n| "http://example.com/#{n}"}
+
+  factory :admin_user do
+    sequence(:email) {|n| "email_#{n}@example.com"}
+    password "password"
+    password_confirmation { password }
+  end
 
   factory :feature do
     video
@@ -47,8 +53,8 @@ FactoryGirl.define do
   factory :project do
     name
 
-    association :banner, factory: :photo
-    association :banner_hover, factory: :photo
+    banner { generate :url }
+    banner_hover { generate :url }
 
     factory :featured_project do
       featured true

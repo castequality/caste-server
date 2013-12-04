@@ -10,4 +10,5 @@ nav.header
     = image_tag "logo.jpg", class: "brand-logo"
 
   = link_to featured_project_path, id: "banner", class: "banner" do
-    = image_tag featured_project.banner.url(:banner)
+    = image_tag featured_project.banner_hover, class: "project-banner-hover"
+    = image_tag featured_project.banner, class: "project-banner"

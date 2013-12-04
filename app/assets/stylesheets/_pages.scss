@@ -8,3 +8,21 @@ body {
 .content {
   margin-left: $page-left-margin;
 }
+
+.hover-container {
+  display: block;
+  position: relative;
+
+  img {
+    position: absolute;
+
+    &:first-of-type {
+    }
+
+    &:last-of-type {
+      &:hover {
+        opacity: 0;
+      }
+    }
+  }
+}

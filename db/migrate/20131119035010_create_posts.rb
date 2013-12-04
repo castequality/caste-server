@@ -9,6 +9,5 @@ class CreatePosts < ActiveRecord::Migration
     end
     
     add_index :posts, :name, unique: true
-    add_index :posts, [:name, :body]
   end
 end

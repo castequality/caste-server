@@ -4,8 +4,7 @@ class Project < ActiveRecord::Base
     config.mimic Project
   end
 
-  has_one :banner, as: :contentable, class_name: Photo
-  has_one :banner_hover, as: :contentable, class_name: Photo
+  BANNER_DIMENSIONS = "750x118#"
 
   has_many :photos, as: :contentable, class_name: Photo
   has_one :video, as: :contentable, class_name: Video

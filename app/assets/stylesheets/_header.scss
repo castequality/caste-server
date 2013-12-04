@@ -52,6 +52,8 @@ $banner-width: 750px;
   @include size($banner-width 100%);
 
   display: block;
+
+  @extend .hover-container;
 }
 
 .brand-logo {
