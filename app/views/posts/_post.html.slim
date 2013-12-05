@@ -1,10 +1,8 @@
-- cache post do  
+- cache post do
   article.post id=dom_id(post)
-    header
-      h1.name
-        = post.name
-      span.published-at
-        = l post.published_at, format: :post
+    h1.name
+      = post.name
+      = time_tag post.published_at.to_date, class: "published-at", pubdate: true
 
     = video_tags_for post.videos do |video|
       iframe.video src=video.url

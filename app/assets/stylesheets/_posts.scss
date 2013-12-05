@@ -10,8 +10,39 @@ $posts-width: 524px;
   .posts, .visuals-small {
     float: left;
     margin-right: $element-margin;
+    min-height: 1px;
   }
+
   &:last-child {
     margin-right: auto;
   }
+}
+
+.post {
+  border-top: 1px solid $medium-gray;
+
+  .name {
+    font-size: 1em;
+    margin: 0;
+
+    .published-at {
+      margin-top: -2px;
+      float: right;
+    }
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.published-at {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

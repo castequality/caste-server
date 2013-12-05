@@ -16,9 +16,6 @@ body {
   img {
     position: absolute;
 
-    &:first-of-type {
-    }
-
     &:last-of-type {
       &:hover {
         opacity: 0;

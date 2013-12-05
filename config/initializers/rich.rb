@@ -16,6 +16,8 @@ if Object.const_defined?("Rich")
     # you are editing. To disable this:
     #   config.editor[:startupOutlineBlocks] = false
 
+    config.editor[:format_tags] = "p;img"
+    config.allow_embeds = true
     
     # == Image styles
     # 
@@ -28,10 +30,9 @@ if Object.const_defined?("Rich")
     # remember to re-generate your styles by running:
     #   rake rich:refresh_assets
     config.image_styles = {
-      :thumb => "100x100#"
+      thumb: "100x100#",
+      banner: "750x118#"
     }
-
-    config.allow_embeds = true
 
     # == Convert options
     #
