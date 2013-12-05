@@ -17,22 +17,6 @@ feature 'Posts page' do
     expect(page).not_to have_post post
   end
 
-  scenario 'display a post with videos' do
-    with_video = create :post_with_videos, video_count: 2
-
-    visit posts_path
-
-    expect(page).to have_video_post with_video
-  end
-
-  scenario 'displays a post with photos' do
-    with_photos = create :post_with_photos, photo_count: 2
-
-    visit posts_path
-
-    expect(page).to have_photo_post with_photos
-  end
-
   scenario 'displays original visuals on the page' do
     visual = create :visual, :original
 

@@ -4,11 +4,5 @@
       = post.name
       = time_tag post.published_at.to_date, class: "published-at", pubdate: true
 
-    = video_tags_for post.videos do |video|
-      iframe.video src=video.url
-
     p.body
       = post.body.html_safe
-
-    = photo_tags_for post.photos do |photo|
-      = image_tag photo.file.url(:medium), class: "photo"

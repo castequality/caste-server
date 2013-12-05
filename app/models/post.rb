@@ -4,9 +4,6 @@ class Post < ActiveRecord::Base
     config.mimic Post
   end
 
-  has_many :videos, as: :contentable
-  has_many :photos, as: :contentable
-
   default_scope { published }
 
   scope :published, ->{ where("published_at < ?", Time.now) }
