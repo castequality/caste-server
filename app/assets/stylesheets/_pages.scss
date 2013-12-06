@@ -13,6 +13,12 @@ iframe {
   margin-left: $page-left-margin;
 }
 
+a[rel^=lightbox] {
+  img:hover {
+    opacity: 0.9;
+  }
+}
+
 .hover-container {
   display: block;
   position: relative;
