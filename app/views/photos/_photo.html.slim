@@ -1,3 +1,2 @@
 - cache photo do
-  = link_to photo.url, title: photo.caption, rel: 'lightbox[feed]' do
-    = image_tag photo.thumbnail, class: "photo"
+  = lightbox_tag photo.thumbnail, photo.url, photo.caption, :feed, class: "photo"
