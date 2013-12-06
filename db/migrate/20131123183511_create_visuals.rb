@@ -4,7 +4,7 @@ class CreateVisuals < ActiveRecord::Migration
       t.string :photo, null: false
       t.string :thumbnail, null: false
 
-      t.string :caption, default: ""
+      t.string :caption
 
       t.references :source
 

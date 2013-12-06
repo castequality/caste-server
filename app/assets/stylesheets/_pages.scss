@@ -5,6 +5,10 @@ body {
   margin: auto;
 }
 
+iframe {
+  border: none;
+}
+
 .content {
   margin-left: $page-left-margin;
 }

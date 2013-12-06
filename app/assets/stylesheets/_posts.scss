@@ -6,8 +6,12 @@ $posts-width: 524px;
   overflow: hidden;
 }
 
+.photos {
+  width: $header-size;
+}
+
 .blog {
-  .posts, .visuals-small {
+  .posts, .photos {
     float: left;
     margin-right: $element-margin;
     min-height: 1px;

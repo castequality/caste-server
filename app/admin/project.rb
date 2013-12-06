@@ -9,8 +9,16 @@ ActiveAdmin.register Project do
     f.inputs "Project Info" do
       f.input :name
 
-      f.input :banner, as: :rich_picker, config: { style: 'width: 400px !important;' }
-      f.input :banner_hover, as: :rich_picker, config: { style: 'width: 400px !important;' }
+      banner_args = [
+        as: :rich_picker,
+        config: {
+          allowed_styles: [:banner],
+          style: 'width: 400px !important;'
+        }
+      ]
+
+      f.input :banner, *banner_args
+      f.input :banner_hover, *banner_args
     end
 
     f.inputs "Publish Info" do

@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery.lightbox-0.5
+//= require carousel
 //= require_tree .
 //= require turbolinks

@@ -4,7 +4,7 @@ RSpec::Matchers.define :have_project do |project|
 
     page.has_project?(project) &&
     page.has_photos?(project.photos) &&
-    page.has_video?(project.video)
+    page.has_video?(project.video_url)
   end
 
   module ProjectMatchers
@@ -17,14 +17,14 @@ RSpec::Matchers.define :have_project do |project|
     def has_photos?(photos)
       photos.all? do |photo|
         photo_node = node_for(photo)
-        photo_node.present? && photo_node["src"] == photo.url(:large)
+        photo_node.present? && photo_node["src"] == photo.url
       end
     end
 
-    def has_video?(video)
-      video_node = node_for(video)
+    def has_video?(video_url)
+      video_node = all(".video").first
 
-      video_node.present? && video_node["src"] == video.url
+      video_node.present? && video_node["src"] == video_url
     end
 
     private

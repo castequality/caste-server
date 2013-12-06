@@ -1,6 +1,5 @@
 article id=dom_id(project)
   - project.with_photos do |photo|
-      = image_tag photo.url(:large), id: dom_id(photo)
+      = image_tag photo.url, id: dom_id(photo)
 
-  - project.with_video do |video|
-    iframe src=video.url id=dom_id(video)
+  iframe.video src=project.video_url

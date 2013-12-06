@@ -17,12 +17,12 @@ feature 'Posts page' do
     expect(page).not_to have_post post
   end
 
-  scenario 'displays original visuals on the page' do
-    visual = create :visual, :original
+  scenario 'displays orphaned photos on the page' do
+    photo = create :photo
 
     visit posts_path
 
-    expect(page).to have_visual visual
+    expect(page).to have_photo photo
   end
 
   scenario 'paginates posts' do

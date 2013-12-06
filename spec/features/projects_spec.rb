@@ -13,12 +13,10 @@ feature "The projects page" do
 
   context "when linked to a project" do
     given(:photo)   { build :photo }
-    given(:video)   { build :video }
-    given(:project) { build :project, photos: [photo], video: video }
+    given(:project) { build :project, photos: [photo] }
 
     background do
       photo.save!
-      video.save!
       project.save!
       visit project_path(project)
     end

@@ -4,17 +4,10 @@ class Project < ActiveRecord::Base
     config.mimic Project
   end
 
-  has_many :photos, as: :contentable, class_name: Photo
-  has_one :video, as: :contentable, class_name: Video
-  
+  has_many :photos, ->{ order('ordinal ASC') }, as: :imageable
+
   def self.featured
     find_by(featured: true) || Null.new
-  end
-
-  def with_video(&block)
-    if video.present? && block_given?
-      yield video
-    end
   end
 
   def with_photos(&block)

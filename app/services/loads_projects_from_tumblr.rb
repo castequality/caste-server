@@ -9,15 +9,16 @@ class LoadsProjectsFromTumblr
     @loader.load!(type: :photo) do |post|
       if Project.find_by(published_at: post["date"]).nil?
         project = Project.create \
-          name: post["date"],
           featured: true,
-          published_at: post["date"]
-        
-        project.photos.each_with_index do |photo, index|
+          video_url: video_url(post),
+          name: post["date"],
+          published_at: post["date"],
+          banner: "",
+          banner_hover: ""
+
+        post["photos"].each_with_index do |photo, index|
           create_photo project, photo, index
         end
-
-        create_video project, post["caption"], project.photos.count + 1
       end
     end
   end
@@ -27,17 +28,11 @@ class LoadsProjectsFromTumblr
       Photo.create \
           ordinal: index,
           caption: photo["caption"],
-          url: photo["alt_sizes"].first.url,
-          contentable: project
+          url: photo["alt_sizes"].first["url"],
+          imageable: project
     end
 
-    def create_video(project, content, ordinal)
-      url = Nokogiri::HTML(project["caption"]).css("iframe").first["src"]
-      project.build_video(
-        Video.create \
-          url: url,
-          contentable: project,
-          ordinal: ordinal
-      ).save!
+    def video_url(post)
+      Nokogiri::HTML(post["caption"]).css("iframe").first["src"]
     end
 end
