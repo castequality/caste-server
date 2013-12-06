@@ -4,6 +4,7 @@ $header-size: 118px;
 
 $pages-width: $page-left-margin - $element-margin;
 $pages-margin: 12px;
+$page-link-margin: 15px;
 
 $banner-width: 750px;
 
@@ -27,7 +28,7 @@ $banner-width: 750px;
 }
 
 .pages {
-  @include size($pages-width 100%);
+  @include size($pages-width $header-size);
 
   text-align: right;
 
@@ -35,11 +36,11 @@ $banner-width: 750px;
     height: 18px;
 
     &:first-of-type {
-      margin-top: $pages-margin;
+      margin-top: $page-link-margin;
     }
 
     &:last-of-type {
-      margin-bottom: $pages-margin;
+      margin-bottom: $page-link-margin;
     }
   }
 }
@@ -51,11 +52,11 @@ $banner-width: 750px;
 }
 
 .banner {
+  @extend .hover-container;
   @include size($banner-width 100%);
 
+  background: $base-image-color;
   display: block;
-
-  @extend .hover-container;
 }
 
 .brand-logo {

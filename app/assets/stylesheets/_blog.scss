@@ -1,21 +1,27 @@
 $posts-width: 524px;
+$links-width: 205px;
+$store-link-height: 310px;
+$instagram-link-height: $links-width;
 
 .posts {
   @include size($posts-width 100%);
-
-  overflow: hidden;
 }
 
 .photos {
-  width: $header-size;
+  @include size($header-size 100%);
 
   .photo {
     margin-bottom: 5px;
   }
 }
 
+.links {
+  @include size($links-width 100%);
+
+}
+
 .blog {
-  .posts, .photos {
+  .posts, .photos, .links {
     float: left;
     margin-right: $element-margin;
     min-height: 1px;
@@ -48,6 +54,21 @@ $posts-width: 524px;
   img {
     width: 100%;
   }
+}
+
+.store-link, .instagram-link {
+  background: $base-image-color;
+  display: block;
+  width: 100%;
+  margin-bottom: $element-margin;
+}
+
+.store-link {
+  height: $store-link-height;
+}
+
+.instagram-link {
+  height: $instagram-link-height;
 }
 
 .published-at {
