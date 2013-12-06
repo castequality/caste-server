@@ -24,5 +24,9 @@ feature "The projects page" do
     scenario "displays the linked project" do
       expect(page).to have_project project
     end
+
+    scenario "displays a link to the project" do
+      expect(page).to have_link_for_project project
+    end
   end
 end

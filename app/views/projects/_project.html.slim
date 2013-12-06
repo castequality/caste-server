@@ -1,5 +1,11 @@
-article id=dom_id(project)
-  - project.with_photos do |photo|
-      = image_tag photo.url, id: dom_id(photo)
+- cache project do
+  article.project.slider id=dom_id(project)
+    ul.slides
+      - if video_first?
+        = render 'video_slide', project: project
 
-  iframe.video src=project.video_url
+      - project.with_photos do |photo|
+        = render 'photo_slide', photo: photo
+
+      - if video_last?
+        = render 'video_slide', project: project

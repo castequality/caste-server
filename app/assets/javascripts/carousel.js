@@ -1,1 +1,0 @@
-//= depend_on_asset "lightbox/loading.gif"

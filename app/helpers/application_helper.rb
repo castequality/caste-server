@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def featured_project_path
-    project_path(featured_project)
+    project_path(featured_project, video: true)
   end
 
   def header_link_to(route, link_path = nil)

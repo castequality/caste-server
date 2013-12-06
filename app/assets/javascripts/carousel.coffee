@@ -1,0 +1,7 @@
+$(document).on "ajax:complete page:change ready", (event) ->
+  $('.slider').flexslider
+    controlNav: false
+    directionNav: false
+    useCSS: true
+    touch: true
+    video: false

@@ -13,4 +13,8 @@ class Project < ActiveRecord::Base
   def with_photos(&block)
     photos.each(&block)
   end
+
+  def numeral
+    RomanNumerals.to_roman(id)
+  end
 end

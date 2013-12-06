@@ -1,17 +1,4 @@
 GIT
-  remote: git://github.com/bastiaanterhorst/rich.git
-  revision: 1b4c1934875252a41865c586d91ea8080b55f001
-  specs:
-    rich (1.4.7)
-      jquery-rails
-      kaminari
-      mime-types
-      paperclip
-      rack-raw-upload
-      rails (>= 3.2.0)
-      sass-rails
-
-GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 7ee54a9bacddcf4039f7ad4a0ff6090371106e41
   specs:
@@ -91,11 +78,6 @@ GEM
     capybara-webkit (1.0.0)
       capybara (~> 2.0, >= 2.0.2)
       json
-    carousel (1.0.0)
-      compass
-      jquery-rails
-      rails
-    chunky_png (1.2.9)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -108,10 +90,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    compass (0.12.2)
-      chunky_png (~> 1.2)
-      fssm (>= 0.2.7)
-      sass (~> 3.1)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
     daemons (1.1.9)
@@ -146,13 +124,14 @@ GEM
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
+    flexslider (2.2.0)
+      sass-rails (>= 3.1.0)
     flutie (2.0.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
-    fssm (0.2.10)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -239,6 +218,15 @@ GEM
       mail
     responders (1.0.0)
       railties (>= 3.2, < 5)
+    rich (1.4.6)
+      jquery-rails
+      kaminari
+      mime-types
+      paperclip
+      rack-raw-upload
+      rails (>= 3.2.0)
+      sass-rails
+    roman-numerals (0.3.0)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -285,8 +273,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sprockets_better_errors (0.0.2)
-      sprockets-rails (>= 1.0.0)
     temple (0.6.7)
     thor (0.18.1)
     thread_safe (0.1.3)
@@ -331,7 +317,6 @@ DEPENDENCIES
   binding_of_caller
   bourbon
   capybara-webkit (>= 1.0.0)
-  carousel
   coffee-rails
   daemons
   database_cleaner
@@ -339,6 +324,7 @@ DEPENDENCIES
   dotenv-rails
   email_validator
   factory_girl_rails
+  flexslider
   flutie
   foreman
   has_scope
@@ -358,14 +344,14 @@ DEPENDENCIES
   rails (>= 4.0.1)
   rails_12factor
   recipient_interceptor
-  rich!
+  rich
+  roman-numerals
   rspec-rails (>= 2.14)
   sass-rails
   shoulda-matchers
   simple_form
   simplecov
   slim-rails
-  sprockets_better_errors
   timecop
   tumblr_client
   turbolinks
