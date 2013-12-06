@@ -28,7 +28,8 @@ class LoadsProjectsFromTumblr
       Photo.create \
           ordinal: index,
           caption: photo["caption"],
-          url: photo["alt_sizes"].first["url"],
+          url: photo["alt_sizes"][0]["url"],
+          thumbnail: photo["alt_sizes"][2]["url"],
           imageable: project
     end
 

@@ -49,7 +49,8 @@ FactoryGirl.define do
   end
 
   factory :photo do
-    url { generate :url }
+    url       { generate :url }
+    thumbnail { generate :url }
   end
 
   factory :source do

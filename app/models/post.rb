@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
     config.mimic Post
   end
 
+  paginates_per 3
+
   default_scope { published }
 
   scope :published, ->{ where("published_at < ?", Time.now) }
