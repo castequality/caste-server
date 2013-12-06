@@ -8,6 +8,10 @@ $posts-width: 524px;
 
 .photos {
   width: $header-size;
+
+  .photo {
+    margin-bottom: 5px;
+  }
 }
 
 .blog {
@@ -33,6 +37,12 @@ $posts-width: 524px;
       margin-top: -2px;
       float: right;
     }
+  }
+
+  p {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    font-size: 13px;
   }
 
   img {

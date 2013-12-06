@@ -15,7 +15,8 @@ class SyncsVisuals
           source: source,
           caption: photo["caption"],
           photo: large,
-          thumbnail: thumbnail
+          thumbnail: thumbnail,
+          published_at: visual[:date]
       end
     end
   end

@@ -10,11 +10,10 @@ RSpec::Matchers.define :have_post do |post|
   end
 
   failure_message_for_should do |page|
-    binding.pry
     %Q{expected page to have post:
 
         #{post.inspect}
-      
+
       but was not found in:
 
         #{page.body.squish}

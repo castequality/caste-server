@@ -31,7 +31,7 @@ feature 'Posts page' do
 
     visit posts_path(page: 1, per: 1)
 
-    expect(page).to have_post first
-    expect(page).not_to have_post second
+    expect(page).to have_post second
+    expect(page).not_to have_post first
   end
 end

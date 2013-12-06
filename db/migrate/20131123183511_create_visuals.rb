@@ -3,6 +3,7 @@ class CreateVisuals < ActiveRecord::Migration
     create_table :visuals do |t|
       t.string :photo, null: false
       t.string :thumbnail, null: false
+      t.datetime :published_at, null: false
 
       t.string :caption
 

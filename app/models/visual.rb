@@ -1,4 +1,6 @@
 class Visual < ActiveRecord::Base
+  include Publishable
+
   belongs_to :source, touch: true
 
   delegate :name, to: :source, prefix: true, allow_nil: true

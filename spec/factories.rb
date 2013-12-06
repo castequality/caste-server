@@ -4,6 +4,8 @@ FactoryGirl.define do
 
   trait :featured do
     featured  { true }
+
+    published
   end
 
   trait :published do
@@ -43,6 +45,8 @@ FactoryGirl.define do
     banner        { generate :url  }
     banner_hover  { generate :url  }
 
+    published
+
     factory :featured_project do
       featured
     end
@@ -60,6 +64,8 @@ FactoryGirl.define do
   factory :visual do
     photo     { generate :url }
     thumbnail { generate :url }
+
+    published
 
     trait :imported do
       source

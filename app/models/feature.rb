@@ -1,5 +1,5 @@
 class Feature < ActiveRecord::Base
-  default_scope { order('id desc') }
+  include Publishable
 
   def self.featured
     find_by(featured: true)

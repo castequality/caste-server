@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  include Publishable
+
   Null = Naught.build do |config|
     config.black_hole
     config.mimic Project
