@@ -14,5 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.flexslider
+//= require lightbox
 //= require_tree .
 //= require turbolinks
