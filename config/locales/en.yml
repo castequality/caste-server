@@ -36,6 +36,10 @@ en:
     text: load more
     loading: loading...
 
+  site:
+    app_name: caste quality
+    separator: |
+
   social:
     urls:
       vimeo: http://vimeo.com/user16108071

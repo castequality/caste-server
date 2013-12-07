@@ -1,5 +1,13 @@
 require "spec_helper"
 
+feature "The page title" do
+  include_context :page_for, :posts
+
+  scenario "contains the site name" do
+    expect(page).to have_title t("site.app_name")
+  end
+end
+
 feature "The page header" do
   scenario "has the banner for the most recent project" do
     project = create :featured_project
