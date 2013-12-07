@@ -13,6 +13,13 @@ iframe {
   margin-left: $page-left-margin;
 }
 
+.background-text {
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
 a[rel^=lightbox] {
   img:hover {
     opacity: 0.9;

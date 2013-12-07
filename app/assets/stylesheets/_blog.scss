@@ -89,18 +89,31 @@ $instagram-link-height: $links-width;
 }
 
 .store-link, .instagram-link {
+  position: relative;
   background: $base-image-color;
   display: block;
   width: 100%;
   margin-bottom: $element-margin;
+
+  .background-text {
+    color: #fff;
+  }
 }
 
 .store-link {
   height: $store-link-height;
+
+  .background-text {
+    line-height: $store-link-height;
+  }
 }
 
 .instagram-link {
   height: $instagram-link-height;
+
+  .background-text {
+    line-height: $instagram-link-height;
+  }
 }
 
 .published-at {

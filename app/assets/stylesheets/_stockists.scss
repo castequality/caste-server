@@ -1,0 +1,17 @@
+$stockists-height: 550px;
+$stockists-width: 888px;
+
+.stockists {
+  @include size($stockists-width $stockists-height);
+
+  position: relative;
+
+  .background-text {
+    line-height: $stockists-height;
+  }
+
+  iframe {
+    @include size(100%);
+    position: absolute;
+  }
+}

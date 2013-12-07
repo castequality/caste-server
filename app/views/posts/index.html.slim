@@ -4,8 +4,13 @@
   section.posts
     = render collection
   aside.links#links
+
     a.store-link
+      p.background-text store
+
     a.instagram-link
+      p.background-text instagram
+
     section.social-links
       - social_networks.each do |network_name|
         = social_link_to network_name
