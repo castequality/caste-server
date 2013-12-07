@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Paginated
+
   protect_from_forgery with: :exception
 
   def featured_project

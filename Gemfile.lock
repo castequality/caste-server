@@ -25,8 +25,8 @@ GIT
       responders (~> 1.0.0.rc)
 
 GIT
-  remote: git://github.com/seanpdoyle/lightboxjs.git
-  revision: 929f82d7e39d832ed9b78ca5eb52d6fcce4e47dd
+  remote: git://github.com/prophotos/lightboxjs.git
+  revision: 6e22a7c1ac4a9b0a1c983ee167e93597d67fed9c
   specs:
     lightboxjs (0.0.1)
       railties (>= 3.1)

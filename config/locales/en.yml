@@ -1,18 +1,25 @@
 en:
   about: >
-          An independently owned and operated company developed by a 
-          group of skateboarders brought together by one common interest. 
-          Skateboarding has shaped the perspectives of everyone involved 
-          in CASTE and acts as the foundation of the brand. CASTE operates 
-          to create products based on the influence of our continually 
-          expanding and diverse library of communicative mediums. Our 
-          attention to detail transcends from visual media into physical 
+          An independently owned and operated company developed by a
+          group of skateboarders brought together by one common interest.
+          Skateboarding has shaped the perspectives of everyone involved
+          in CASTE and acts as the foundation of the brand. CASTE operates
+          to create products based on the influence of our continually
+          expanding and diverse library of communicative mediums. Our
+          attention to detail transcends from visual media into physical
           products that all share the same regards to quality.
 
   brand: Caste Quality
 
   contact:
     email: info@castequality.com
+
+  social:
+    urls:
+      vimeo: http://vimeo.com/user16108071
+      youtube: http://www.youtube.com/user/CASTEQuality
+      twitter: https://twitter.com/castequality
+      facebook: https://www.facebook.com/pages/Caste-Quality/241637155973501?group_id=0
 
   date:
     formats:

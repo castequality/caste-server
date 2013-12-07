@@ -1,6 +1,8 @@
 $posts-width: 524px;
 $links-width: 205px;
 $store-link-height: 310px;
+$social-link-height: 40px;
+$social-link-margin: 15px;
 $instagram-link-height: $links-width;
 
 .posts {
@@ -15,9 +17,16 @@ $instagram-link-height: $links-width;
   }
 }
 
+.fixed-links {
+  float: right;
+  position: fixed;
+  margin-top: -138px;
+  margin-left: 682px;
+}
+
 .links {
   @include size($links-width 100%);
-
+  margin-bottom: $social-link-margin;
 }
 
 .blog {
@@ -54,6 +63,29 @@ $instagram-link-height: $links-width;
   img {
     width: 100%;
   }
+}
+
+.social-links {
+  border-bottom: 1px inset rgba(0,0,0,.5);
+  padding-bottom: $element-margin;
+  margin-bottom: $element-margin;
+  overflow: hidden;
+
+  .social-link {
+    float: left;
+
+    margin-right: $social-link-margin;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.social-link {
+  @include size($social-link-height);
+
+  display: block;
 }
 
 .store-link, .instagram-link {

@@ -3,6 +3,10 @@
     = render Photo.orphaned
   section.posts
     = render collection
-  aside.links
+  aside.links#links
     a.store-link
     a.instagram-link
+    section.social-links
+      - social_networks.each do |network_name|
+        = social_link_to network_name
+    = image_tag "brain-circle.jpg", class: ".brain-logo"

@@ -1,5 +1,7 @@
 module FeaturesHelper
-  def link_for(route)
-    find("##{route}-link")
+  include LinksHelper
+
+  def find_link_for(route)
+    find("##{link_for(route)}")
   end
 end

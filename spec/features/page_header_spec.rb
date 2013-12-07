@@ -12,7 +12,7 @@ feature "The page header" do
   scenario "contains the home logo link to the posts path" do
     visit posts_path
 
-    link_for(:home).click
+    find_link_for(:home).click
 
     expect(current_path).to eq posts_path
   end
@@ -20,7 +20,7 @@ feature "The page header" do
   scenario "contains the store link to the online store" do
     visit posts_path
 
-    expect(link_for(:store)).to match_store_link
+    expect(find_link_for(:store)).to match_store_link
   end
 
   %w[projects visuals contact stockists].each do |route|

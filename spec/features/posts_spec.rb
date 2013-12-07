@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-feature 'Posts page' do
-  scenario 'has the most recently published posts' do
+feature "The blog" do
+  scenario "displays the most recently published posts" do
     post = create :post
 
     visit posts_path
@@ -9,7 +9,7 @@ feature 'Posts page' do
     expect(page).to have_post post
   end
 
-  scenario 'does not display non-published posts' do
+  scenario "hides non-published posts" do
     post = create :post, :unpublished
 
     visit posts_path
@@ -17,7 +17,7 @@ feature 'Posts page' do
     expect(page).not_to have_post post
   end
 
-  scenario 'displays orphaned photos on the page' do
+  scenario "displays the photo feed" do
     photo = create :photo
 
     visit posts_path
@@ -25,13 +25,16 @@ feature 'Posts page' do
     expect(page).to have_photo photo
   end
 
-  scenario 'paginates posts' do
-    first   = create :post
-    second  = create :post
+  context "has social links" do
+    subject { page }
 
-    visit posts_path(page: 1, per: 1)
+    before do
+      visit posts_path
+    end
 
-    expect(page).to have_post second
-    expect(page).not_to have_post first
+    it { should have_social_link_for :vimeo }
+    it { should have_social_link_for :youtube }
+    it { should have_social_link_for :twitter }
+    it { should have_social_link_for :facebook }
   end
 end
