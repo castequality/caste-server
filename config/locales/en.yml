@@ -29,12 +29,12 @@ en:
 
   loading:
     instagram: instagram
-    stockists: loading...
+    stockists: loading stockists...
     store: store
 
   paging:
     text: load more
-    loading: loading stockists...
+    loading: loading...
 
   social:
     urls:
