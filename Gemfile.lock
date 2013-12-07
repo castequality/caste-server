@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/bastiaanterhorst/rich.git
+  revision: 0773c8f1f30ef15fcabe13cbb555b8e338deb323
+  specs:
+    rich (1.4.7)
+      jquery-rails
+      kaminari
+      mime-types
+      paperclip
+      rack-raw-upload
+      rails (>= 3.2.0)
+      sass-rails
+
+GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 7ee54a9bacddcf4039f7ad4a0ff6090371106e41
   specs:
@@ -233,14 +246,6 @@ GEM
       mail
     responders (1.0.0)
       railties (>= 3.2, < 5)
-    rich (1.4.6)
-      jquery-rails
-      kaminari
-      mime-types
-      paperclip
-      rack-raw-upload
-      rails (>= 3.2.0)
-      sass-rails
     roman-numerals (0.3.0)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
@@ -361,7 +366,7 @@ DEPENDENCIES
   rails (>= 4.0.1)
   rails_12factor
   recipient_interceptor
-  rich
+  rich!
   roman-numerals
   rspec-rails (>= 2.14)
   sass-rails
