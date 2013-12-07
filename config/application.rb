@@ -5,7 +5,6 @@ require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "sprockets/railtie"
-# require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -28,8 +27,6 @@ module CasteServer
     %w[services].each do |loaded|
       config.autoload_paths << File.join(Rails.root, 'app', loaded)
     end
-
-    config.assets.precompile += %w( fonts/flexslider-icon.eot )
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
