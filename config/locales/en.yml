@@ -34,7 +34,7 @@ en:
 
   paging:
     text: load more
-    loading: loading...
+    loading: loading stockists...
 
   social:
     urls:
