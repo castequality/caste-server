@@ -46,7 +46,7 @@ GIT
 
 GIT
   remote: git://github.com/seanpdoyle/lightboxjs.git
-  revision: 8e4201269c8e7e0a757645ab80f7517c7a8200b9
+  revision: a34f35d067ad361942bc9b66277c472ff14553bd
   specs:
     lightboxjs (0.0.1)
       railties (>= 3.1)
