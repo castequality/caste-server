@@ -14,13 +14,6 @@ en:
   contact:
     email: info@castequality.com
 
-  social:
-    urls:
-      vimeo: http://vimeo.com/user16108071
-      youtube: http://www.youtube.com/user/CASTEQuality
-      twitter: https://twitter.com/castequality
-      facebook: https://www.facebook.com/pages/Caste-Quality/241637155973501?group_id=0
-
   date:
     formats:
       default: '%m/%d/%Y'
@@ -33,6 +26,18 @@ en:
       store: "store"
       stockists: "stockists"
       visuals: "visual"
+
+  loading:
+    instagram: instagram
+    stockists: loading...
+    store: store
+
+  social:
+    urls:
+      vimeo: http://vimeo.com/user16108071
+      youtube: http://www.youtube.com/user/CASTEQuality
+      twitter: https://twitter.com/castequality
+      facebook: https://www.facebook.com/pages/Caste-Quality/241637155973501?group_id=0
 
   time:
     formats:

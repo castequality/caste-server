@@ -23,11 +23,11 @@ feature "The page header" do
     expect(find_link_for(:store)).to match_store_link
   end
 
-  %w[projects visuals contact stockists].each do |route|
-    scenario "contains the #{route} link to the #{route} page" do
-      visit posts_path
+  context "links" do
+    include_context :page_for, :posts
 
-      expect(page).to have_link_for route
+    %w[projects visuals contact stockists].each do |route|
+      it { should have_link_for route }
     end
   end
 end

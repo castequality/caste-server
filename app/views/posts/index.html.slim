@@ -6,10 +6,12 @@
   aside.links#links
 
     a.store-link
-      p.background-text store
+      p.background-text
+        = t("loading.store")
 
     a.instagram-link
-      p.background-text instagram
+      p.background-text
+        = t("loading.instagram")
 
     section.social-links
       - social_networks.each do |network_name|

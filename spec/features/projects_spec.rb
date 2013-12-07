@@ -12,6 +12,8 @@ feature "The projects page" do
   end
 
   context "when linked to a project" do
+    subject { page }
+
     given(:photo)   { build :photo }
     given(:project) { build :project, photos: [photo] }
 
@@ -21,12 +23,7 @@ feature "The projects page" do
       visit project_path(project)
     end
 
-    scenario "displays the linked project" do
-      expect(page).to have_project project
-    end
-
-    scenario "displays a link to the project" do
-      expect(page).to have_link_for_project project
-    end
+    it { should have_project project }
+    it { should have_link_for_project project }
   end
 end

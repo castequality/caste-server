@@ -10,6 +10,8 @@ feature 'Splash page' do
   end
 
   context 'when a feature exists' do
+    subject { page }
+
     given(:feature) { build :featured_feature }
 
     background do
@@ -17,9 +19,7 @@ feature 'Splash page' do
       visit root_path
     end
 
-    scenario 'displays the newest feature video' do
-      expect(page).to have_feature feature
-    end
+    it { should have_feature feature }
 
     scenario 'has a link to enter the site' do
       find('#enter-site').click
