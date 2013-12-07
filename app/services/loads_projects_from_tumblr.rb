@@ -1,6 +1,6 @@
-require 'nokogiri'
-
 class LoadsProjectsFromTumblr
+  URL_MATCHER = /src=\"(.+)\"/i
+
   def initialize(blog_name)
     @loader = LoadsAllPosts.new(blog_name)
   end
@@ -34,6 +34,6 @@ class LoadsProjectsFromTumblr
     end
 
     def video_url(post)
-      Nokogiri::HTML(post["caption"]).css("iframe").first["src"]
+      URL_MATCHER.match(post["caption"])[1]
     end
 end
