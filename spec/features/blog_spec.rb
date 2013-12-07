@@ -1,13 +1,7 @@
 require 'spec_helper'
 
 feature "The blog" do
-  scenario "displays the most recently published posts" do
-    post = create :post
-
-    visit posts_path
-
-    expect(page).to have_post post
-  end
+  it_behaves_like :paginated, :posts
 
   scenario "hides non-published posts" do
     post = create :post, :unpublished

@@ -20,6 +20,12 @@ iframe {
   width: 100%;
 }
 
+.paging-link {
+  display: block;
+  margin: $element-margin;
+  text-align: center;
+}
+
 a[rel^=lightbox] {
   img:hover {
     opacity: 0.9;

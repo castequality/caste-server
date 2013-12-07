@@ -3,6 +3,10 @@ module ApplicationHelper
     "//store.#{ENV['HOST'] || 'castequality.com'}"
   end
 
+  def paging_links(**opts)
+    render 'paging', opts
+  end
+
   def featured_project_path
     project_path(featured_project, video: true)
   end

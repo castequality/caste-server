@@ -1,4 +1,4 @@
-$(document).on "ajax:complete page:change ready", (event) ->
+$(document).on "ajax:complete ajaxSuccess page:change ready", (event) ->
   $(".js-slider").flexslider
     slideshow: false
     controlNav: false
@@ -6,6 +6,11 @@ $(document).on "ajax:complete page:change ready", (event) ->
     useCSS: true
     touch: true
     video: false
+
+  $("#next-page").on 'inview', (e, visible) ->
+    return unless visible
+
+    $(this).click()
 
   links = $("#links")
   if links?.length

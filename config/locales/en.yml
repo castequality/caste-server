@@ -32,6 +32,10 @@ en:
     stockists: loading...
     store: store
 
+  paging:
+    text: load more
+    loading: loading...
+
   social:
     urls:
       vimeo: http://vimeo.com/user16108071

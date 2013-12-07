@@ -7,8 +7,4 @@ class Post < ActiveRecord::Base
   end
 
   paginates_per 3
-
-  def published?
-    (published_at || 1.day.from_now) < Time.now
-  end
 end

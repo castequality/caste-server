@@ -5,6 +5,7 @@ class Visual < ActiveRecord::Base
 
   delegate :name, to: :source, prefix: true, allow_nil: true
 
-  scope :original, ->{ where(source_id: nil) }
-  scope :imported, ->{ where.not(source_id: nil) }
+  def classes
+    ["visual", source_name].reject(&:blank?).join('-')
+  end
 end

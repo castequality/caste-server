@@ -1,3 +1,3 @@
 - cache visual do
-  .visual class=["visual", visual.source_name].join("-")
+  .visual id=dom_id(visual) class=visual.classes
     = lightbox_tag visual.thumbnail, visual.photo, visual.caption, :visuals

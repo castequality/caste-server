@@ -1,8 +1,12 @@
 .blog
   aside.photos
     = render Photo.orphaned
+
   section.posts
     = render collection
+
+    = paging_links
+
   aside.links#links
 
     a.store-link

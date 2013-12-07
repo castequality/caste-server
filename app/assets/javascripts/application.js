@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.flexslider
 //= require jquery.scrollspy
+//= require jquery.inview
 //= require lightbox
 //= require_tree .
 //= require turbolinks

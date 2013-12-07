@@ -58,21 +58,14 @@ FactoryGirl.define do
   end
 
   factory :source do
-    name "blog"
+    name { generate :name }
   end
 
   factory :visual do
     photo     { generate :url }
     thumbnail { generate :url }
 
+    source
     published
-
-    trait :imported do
-      source
-    end
-
-    trait :original do
-      source { nil }
-    end
   end
 end
