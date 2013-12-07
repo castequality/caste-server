@@ -1,4 +1,6 @@
-class FeaturesController < InheritedResources::Base
+class SplashesController < InheritedResources::Base
+  layout 'splash'
+
   def index
     if featured.present?
       super
@@ -8,7 +10,7 @@ class FeaturesController < InheritedResources::Base
   end
 
   def featured
-    @featured ||= Feature.featured
+    @featured ||= Splash.featured
   end
   helper_method :featured
 end

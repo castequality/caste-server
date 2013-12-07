@@ -43,6 +43,10 @@ en:
       twitter: https://twitter.com/castequality
       facebook: https://www.facebook.com/pages/Caste-Quality/241637155973501?group_id=0
 
+  splash:
+    link: CLICK HERE TO ENTER
+    name: INSTALLMENT %{id}
+
   time:
     formats:
       default: '%a, %b %-d, %Y at %r'

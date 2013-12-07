@@ -1,4 +1,17 @@
 namespace :tumblr do
+  desc "Seeds from tumblr"
+  task seed: :environment do
+    %w[posts photos projects sources visuals].each do |task|
+      Rake::Task["tumblr:#{task}"].invoke
+    end
+  end
+
+  task sources: :environment do
+    %w[waltwolfe zandertaketomo chrismulhern].each do |source|
+      Source.find_or_create_by name: source
+    end
+  end
+
   desc "Loads posts from tumblr"
   task posts: :environment do
     LoadsPostsFromTumblr.new("casteblog").load!

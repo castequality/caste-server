@@ -1,6 +1,6 @@
-class CreateFeatures < ActiveRecord::Migration
+class CreateSplashes < ActiveRecord::Migration
   def change
-    create_table :features do |t|
+    create_table :splashes do |t|
       t.string :name
       t.string :video_url, null: false
 

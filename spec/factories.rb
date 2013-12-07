@@ -23,10 +23,10 @@ FactoryGirl.define do
     password_confirmation { password }
   end
 
-  factory :feature do
+  factory :splash do
     video_url { generate :url }
 
-    factory :featured_feature do
+    factory :featured_splash do
       featured
     end
   end
