@@ -10,7 +10,7 @@ class CreateProjects < ActiveRecord::Migration
 
       t.string :video_url, null: false
 
-      t.datetime :published_at
+      t.datetime :published_at, default: "now()", null: false
 
       t.timestamps
     end

@@ -6,7 +6,7 @@ class CreateSplashes < ActiveRecord::Migration
 
       t.boolean :featured, default: false, null: false
 
-      t.datetime :published_at
+      t.datetime :published_at, default: "now()", null: false
 
       t.timestamps
     end

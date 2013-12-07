@@ -4,6 +4,7 @@ ruby '2.0.0'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'airbrake'
+gem 'aws-sdk'
 gem 'bourbon'
 gem 'coffee-rails'
 gem 'compass-rails'
