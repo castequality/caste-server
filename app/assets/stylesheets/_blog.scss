@@ -72,6 +72,8 @@ $instagram-link-height: $links-width;
   overflow: hidden;
 
   .social-link {
+    @include link-hover;
+
     float: left;
 
     margin-right: $social-link-margin;
