@@ -11,7 +11,7 @@ gem 'delayed_job_active_record', '>= 4.0.0'
 gem 'dotenv-rails'
 gem 'daemons'
 gem 'email_validator'
-gem 'flexslider'
+gem 'flexslider', github: 'seanpdoyle/Flexslider-2-Rails-Gem'
 gem 'flutie'
 gem 'high_voltage'
 gem 'has_scope'
@@ -41,6 +41,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'foreman'
+  gem 'sprockets_better_errors'
 end
 
 group :development, :test do

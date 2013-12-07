@@ -44,6 +44,13 @@ GIT
     lightboxjs (0.0.1)
       railties (>= 3.1)
 
+GIT
+  remote: git://github.com/seanpdoyle/Flexslider-2-Rails-Gem.git
+  revision: e7ec92e95ea2206e70251f235d02c4eb7ea7103e
+  specs:
+    flexslider (2.2.0)
+      sass-rails (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -151,8 +158,6 @@ GEM
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
-    flexslider (2.2.0)
-      sass-rails (>= 3.1.0)
     flutie (2.0.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
@@ -293,6 +298,8 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sprockets_better_errors (0.0.2)
+      sprockets-rails (>= 1.0.0)
     temple (0.6.7)
     thor (0.18.1)
     thread_safe (0.1.3)
@@ -345,7 +352,7 @@ DEPENDENCIES
   dotenv-rails
   email_validator
   factory_girl_rails
-  flexslider
+  flexslider!
   flutie
   foreman
   has_scope
@@ -374,6 +381,7 @@ DEPENDENCIES
   simple_form
   simplecov
   slim-rails
+  sprockets_better_errors
   timecop
   tumblr_client
   turbolinks
