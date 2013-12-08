@@ -4,6 +4,7 @@ ruby '2.0.0'
 
 gem 'activeadmin', github: 'seanpdoyle/active_admin'
 gem 'airbrake'
+gem 'asset_sync'
 gem 'aws-sdk'
 gem 'bigcartel', github: 'seanpdoyle/bigcartel'
 gem 'bourbon'
