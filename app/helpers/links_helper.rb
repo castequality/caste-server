@@ -7,7 +7,7 @@ module LinksHelper
     opts[:class]  ||= "store-link"
     opts[:target] ||= "_blank"
 
-    full_url = ["//store.castequality.com", join product.url].join
+    full_url = ["//store.castequality.com", product.url].join
 
     render "store_link", url: full_url, thumbnail: product.thumbnail
   end
