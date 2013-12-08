@@ -33,4 +33,19 @@ feature 'Splash page' do
       it { should have_content t("splash.name", id: splash.identifier) }
     end
   end
+
+  context "when more than one splash is featured" do
+    subject { page }
+
+    given(:first)   { build :splash, :featured }
+    given(:second)  { build :splash, :featured }
+
+    background do
+      first.save!
+      second.save!
+      visit root_path
+    end
+
+    it { should have_splash second }
+  end
 end

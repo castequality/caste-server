@@ -2,7 +2,7 @@ class SplashesController < InheritedResources::Base
   layout 'splash'
 
   def index
-    if featured.present?
+    if featured.id
       super
     else
       redirect_to posts_path

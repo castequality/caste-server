@@ -1,9 +1,5 @@
 class Splash < ActiveRecord::Base
-  include Publishable
-
-  def self.featured
-    find_by(featured: true)
-  end
+  include Featureable
 
   def identifier
     "%02d" % id

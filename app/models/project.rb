@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  include Publishable
+  include Featureable
 
   Null = Naught.build do |config|
     config.black_hole
@@ -7,10 +7,6 @@ class Project < ActiveRecord::Base
   end
 
   has_many :photos, ->{ order('ordinal ASC') }, as: :imageable
-
-  def self.featured
-    find_by(featured: true) || Null.new
-  end
 
   def with_photos(&block)
     photos.each(&block)
