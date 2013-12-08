@@ -65,6 +65,10 @@ $instagram-link-height: $links-width;
   }
 }
 
+.instagram-link {
+  @include link-hover;
+}
+
 .social-links {
   border-bottom: 1px inset rgba(0,0,0,.5);
   padding-bottom: $element-margin;

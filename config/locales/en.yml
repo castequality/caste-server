@@ -42,6 +42,7 @@ en:
 
   social:
     urls:
+      instagram: https://instagram.com/%{user}
       vimeo: http://vimeo.com/user16108071
       youtube: http://www.youtube.com/user/CASTEQuality
       twitter: https://twitter.com/castequality

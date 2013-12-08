@@ -13,9 +13,7 @@
       p.background-text
         = t("loading.store")
 
-    a.instagram-link
-      p.background-text
-        = t("loading.instagram")
+    = instagram_link_to
 
     section.social-links
       - social_networks.each do |network_name|
