@@ -1,7 +1,14 @@
+$project-width: 888px;
+$project-height: 499px;
+
 .video {
-  width: 880px;
-  height: 495px;
+  width: $project-width;
+  height: $project-height;
 }
 
 .project {
+}
+
+.project-photo {
+  width: $project-width;
 }

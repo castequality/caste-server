@@ -1,15 +1,11 @@
-$visual-width: 217px;
-$visual-margin: 6px;
+$visual-width: 206px;
 
 .visuals {
-
   @include columns($visual-width);
-  @include column-gap($visual-margin / 2.5);
+  @include column-gap(0);
 
   .visual {
     @include size($visual-width auto);
-
-    margin-bottom: $visual-margin;
-    display: inline-block;
+    margin-bottom: 16px;
   }
 }

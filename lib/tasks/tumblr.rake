@@ -1,7 +1,7 @@
 namespace :tumblr do
   desc "Seeds from tumblr"
   task seed: :environment do
-    %w[posts photos projects sources visuals].each do |task|
+    %w[posts photos projects visuals].each do |task|
       Rake::Task["tumblr:#{task}"].invoke
     end
   end
@@ -31,4 +31,6 @@ namespace :tumblr do
   task visuals: :environment do
     SyncsVisuals.new(Source.all).sync!
   end
+
+  task visuals: :sources
 end
