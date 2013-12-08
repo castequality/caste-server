@@ -9,7 +9,7 @@ ActiveAdmin.register Post do
     f.inputs "Basic info" do
       f.input :name
 
-      f.input :body, as: :rich, config: { height: '400px' }
+      f.input :body, as: :rich, config: { height: '400px', default_style: 'blog' }
       f.input :published_at, label: true
     end
     f.actions
