@@ -1,17 +1,4 @@
 GIT
-  remote: git://github.com/bastiaanterhorst/rich.git
-  revision: 0773c8f1f30ef15fcabe13cbb555b8e338deb323
-  specs:
-    rich (1.4.7)
-      jquery-rails
-      kaminari
-      mime-types
-      paperclip
-      rack-raw-upload
-      rails (>= 3.2.0)
-      sass-rails
-
-GIT
   remote: git://github.com/josevalim/inherited_resources.git
   revision: e4fb9fc804488532014307190812946d63a480a3
   specs:
@@ -50,6 +37,19 @@ GIT
   specs:
     lightboxjs (0.0.1)
       railties (>= 3.1)
+
+GIT
+  remote: git://github.com/seanpdoyle/rich.git
+  revision: eb606f93cce9c8edda06f88505bf170e966d0c34
+  specs:
+    rich (1.4.7)
+      jquery-rails
+      kaminari
+      mime-types
+      paperclip
+      rack-raw-upload
+      rails (>= 3.2.0)
+      sass-rails
 
 GEM
   remote: https://rubygems.org/
