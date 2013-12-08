@@ -1,6 +1,6 @@
 $posts-width: 524px;
 $links-width: 205px;
-$store-link-height: 310px;
+$store-link-height: 308px;
 $social-link-height: 40px;
 $social-link-margin: 15px;
 $instagram-link-height: $links-width;
@@ -65,7 +65,8 @@ $instagram-link-height: $links-width;
   }
 }
 
-.instagram-link {
+.instagram-link,
+.store-link {
   position: relative;
 
   * {
