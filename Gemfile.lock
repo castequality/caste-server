@@ -12,8 +12,23 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/gregbell/active_admin.git
-  revision: 7ee54a9bacddcf4039f7ad4a0ff6090371106e41
+  remote: git://github.com/josevalim/inherited_resources.git
+  revision: e4fb9fc804488532014307190812946d63a480a3
+  specs:
+    inherited_resources (1.4.1)
+      has_scope (~> 0.6.0.rc)
+      responders (~> 1.0.0.rc)
+
+GIT
+  remote: git://github.com/seanpdoyle/Flexslider-2-Rails-Gem.git
+  revision: b4ddb5512d122bdbf5d90007b8b14ee65e8b8b24
+  specs:
+    flexslider (2.2.0)
+      sass-rails (>= 3.1.0)
+
+GIT
+  remote: git://github.com/seanpdoyle/active_admin.git
+  revision: 0ee51a437ec4b955f9c3d513ef6a7356df9ded15
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -28,21 +43,6 @@ GIT
       rails (>= 3.2, < 4.1)
       ransack (~> 1.0)
       sass-rails
-
-GIT
-  remote: git://github.com/josevalim/inherited_resources.git
-  revision: e4fb9fc804488532014307190812946d63a480a3
-  specs:
-    inherited_resources (1.4.1)
-      has_scope (~> 0.6.0.rc)
-      responders (~> 1.0.0.rc)
-
-GIT
-  remote: git://github.com/seanpdoyle/Flexslider-2-Rails-Gem.git
-  revision: b4ddb5512d122bdbf5d90007b8b14ee65e8b8b24
-  specs:
-    flexslider (2.2.0)
-      sass-rails (>= 3.1.0)
 
 GIT
   remote: git://github.com/seanpdoyle/lightboxjs.git
