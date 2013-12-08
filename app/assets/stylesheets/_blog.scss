@@ -66,7 +66,15 @@ $instagram-link-height: $links-width;
 }
 
 .instagram-link {
-  @include link-hover;
+  position: relative;
+
+  * {
+    position: absolute;
+  }
+
+  img:hover {
+    opacity: 0;
+  }
 }
 
 .social-links {

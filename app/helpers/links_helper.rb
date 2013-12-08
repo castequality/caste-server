@@ -9,9 +9,6 @@ module LinksHelper
 
     instagram = ReadsInstagram.new
 
-    link_to instagram.url, opts do
-      content_tag :p, t("loading.instagram"), class: "background-text"
-      image_tag instagram.newest
-    end
+    render "instagram_link", url: instagram.url, newest: instagram.newest
   end
 end
