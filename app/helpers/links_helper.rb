@@ -3,23 +3,17 @@ module LinksHelper
     "#{name}-link"
   end
 
-  def store_link_to(**opts)
+  def store_link_to(product, **opts)
     opts[:class]  ||= "store-link"
     opts[:target] ||= "_blank"
-
-    big_cartel = ReadsBigCartel.new
-
-    product = big_cartel.random_product
 
     render "store_link", url: product.url, thumbnail: product.thumbnail
   end
 
-  def instagram_link_to(**opts)
+  def instagram_link_to(instagram, **opts)
     opts[:class]  ||= "instagram-link"
     opts[:target] ||= "_blank"
 
-    instagram = ReadsInstagram.new
-
-    render "instagram_link", url: instagram.url, thumbnail: instagram.newest
+    render "instagram_link", url: instagram.url, thumbnail: instagram.thumbnail
   end
 end

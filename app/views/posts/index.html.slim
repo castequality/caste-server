@@ -9,9 +9,9 @@
 
   aside.links#links
 
-    = store_link_to
+    = store_link_to Product.random
 
-    = instagram_link_to
+    = instagram_link_to Insta::Gram.newest
 
     section.social-links
       - social_networks.each do |network_name|
