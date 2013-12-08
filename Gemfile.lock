@@ -170,6 +170,7 @@ GEM
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
     fssm (0.2.10)
+    google-analytics-rails (0.0.4)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -364,6 +365,7 @@ DEPENDENCIES
   flexslider!
   flutie
   foreman
+  google-analytics-rails
   has_scope
   high_voltage
   inherited_resources!

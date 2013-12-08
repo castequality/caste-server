@@ -3,7 +3,7 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.string :name, null: false
 
-      t.boolean :featured, default: false, null: false
+      t.boolean :featured, default: true, null: false
 
       t.string :banner, null: false
       t.string :banner_hover, null: false

@@ -4,7 +4,7 @@ class CreateSplashes < ActiveRecord::Migration
       t.string :name
       t.string :video_url, null: false
 
-      t.boolean :featured, default: false, null: false
+      t.boolean :featured, default: true, null: false
 
       t.datetime :published_at, default: "now()", null: false
 
