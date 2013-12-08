@@ -7,7 +7,9 @@ module LinksHelper
     opts[:class]  ||= "store-link"
     opts[:target] ||= "_blank"
 
-    render "store_link", url: product.url, thumbnail: product.thumbnail
+    full_url = ["//store.castequality.com", join product.url].join
+
+    render "store_link", url: full_url, thumbnail: product.thumbnail
   end
 
   def instagram_link_to(instagram, **opts)
