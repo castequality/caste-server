@@ -3,7 +3,7 @@ section.splash
 
   aside.splash-text
     span.splash-name
-      = featured.name || t("splash.name", id: featured.identifier)
+      = featured.name.presence || t("splash.name", id: featured.identifier)
 
     = link_to t("splash.link"), posts_path, id: "enter-site", class: "splash-link"
     = image_tag "splash-brand.jpg", class: "splash-brand"
