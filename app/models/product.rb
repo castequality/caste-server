@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
   def self.random
-    first(order: "RANDOM()") || OpenStruct.new
+    order("RANDOM()").first || OpenStruct.new
   end
 end
