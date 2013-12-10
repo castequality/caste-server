@@ -11,5 +11,12 @@ class CreateBanners < ActiveRecord::Migration
     end
 
     add_index :banners, [:resource_id, :resource_type]
+
+    Project.find_each do |project|
+      Banner.create! \
+        image_url: project.banner,
+        hover_image_url: project.banner_hover,
+        resource: project
+    end
   end
 end
