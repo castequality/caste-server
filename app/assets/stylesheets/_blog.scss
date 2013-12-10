@@ -77,8 +77,10 @@ $instagram-link-height: $links-width;
     position: absolute;
   }
 
-  .hover-image:hover {
-    opacity: 0;
+  &:hover {
+    .hover-image {
+      opacity: 0;
+    }
   }
 }
 
