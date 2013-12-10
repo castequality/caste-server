@@ -1,5 +1,6 @@
 - cache product do
-  = link_to product.store_url, class: "store-link", target: "_blank" do
+  = link_to product.store_url, class: "product-link", target: "_blank" do
     p.background-text
       = t "loading.store"
-    = image_tag product.thumbnail
+    = image_tag product.thumbnail, class: "hover-image"
+    = image_tag "store_banner.png", class: "product-banner"

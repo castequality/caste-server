@@ -2,7 +2,7 @@ $posts-width: 524px;
 
 $links-width: 205px;
 
-$store-link-height: 306px;
+$product-link-height: 306px;
 
 $social-link-height: 40px;
 $social-link-margin: 15px;
@@ -70,14 +70,14 @@ $instagram-link-height: $links-width;
 }
 
 .instagram-link,
-.store-link {
+.product-link {
   position: relative;
 
   * {
     position: absolute;
   }
 
-  img:hover {
+  .hover-image:hover {
     opacity: 0;
   }
 }
@@ -107,7 +107,7 @@ $instagram-link-height: $links-width;
   display: block;
 }
 
-.store-link, .instagram-link {
+.product-link, .instagram-link {
   position: relative;
   background: $base-image-color;
   display: block;
@@ -119,11 +119,15 @@ $instagram-link-height: $links-width;
   }
 }
 
-.store-link {
-  height: $store-link-height;
+.product-banner {
+  bottom: 50px;
+}
+
+.product-link {
+  height: $product-link-height;
 
   .background-text {
-    line-height: $store-link-height;
+    line-height: $product-link-height;
   }
 }
 

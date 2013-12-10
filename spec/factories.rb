@@ -51,9 +51,6 @@ FactoryGirl.define do
 
     video_url     { generate :url  }
 
-    banner        { generate :url  }
-    banner_hover  { generate :url  }
-
     published
 
     factory :featured_project do
