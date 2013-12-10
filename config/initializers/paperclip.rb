@@ -1,7 +1,4 @@
-storage = (Rails.env.staging? || Rails.env.production?) ? :s3 : :file
-
 Paperclip::Attachment.default_options.merge!(
-  storage: storage,
   url: "/system/:class/:attachment/:id/:style/:filename",
   s3_credentials: {
     bucket: ENV['S3_BUCKET'],
@@ -9,3 +6,9 @@ Paperclip::Attachment.default_options.merge!(
     secret_access_key: ENV['S3_SECRET_ACCESS_KEY']
   }
 )
+
+if Rails.env.staging? || Rails.env.production?
+  Paperclip::Attachment.default_options.merge!(
+    storage: :s3
+  )
+end

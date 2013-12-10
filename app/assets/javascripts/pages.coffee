@@ -2,12 +2,26 @@ $(document).on "ajax:complete ajaxSuccess page:change ready", (event) ->
   $(".js-slider").flexslider
     slideshow: false
     controlNav: false
-    directionNav: false
     useCSS: true
     touch: true
     video: false
 
-  $("#next-page").on 'inview', (e, visible) ->
+    directionNav: true
+    prevText: ""
+    nextText: ""
+
+    after: ->
+      nav         = $(".flex-direction-nav")
+      activeSlide = $(".flex-active-slide")
+      firstChild  = activeSlide.children()[0]
+
+      if firstChild.className is "video"
+        nav.addClass("hidden")
+      else
+        nav.removeClass("hidden")
+
+
+  $("#next-page").on "inview", (e, visible) ->
     return unless visible
 
     $(this).click()

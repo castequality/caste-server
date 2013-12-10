@@ -7,8 +7,27 @@ $project-height: 499px;
 }
 
 .project {
+  position: relative;
 }
 
 .project-photo {
   width: $project-width;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-direction-nav li a {
+  line-height: normal;
+  opacity: 0.5;
+  color: #fff;
+
+  &.flex-prev {
+    left: 0;
+  }
+
+  &.flex-next {
+    right: 20px;
+  }
 }
