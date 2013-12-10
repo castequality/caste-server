@@ -1,15 +1,15 @@
 require "spec_helper"
 
-feature 'Splash page' do
-  context 'when nothing is featured' do
-    scenario 'the user is redirected to the posts page' do
+feature "Splash page" do
+  context "when nothing is featured" do
+    scenario "the user is redirected to the posts page" do
       visit root_path
 
       expect(current_path).to eq posts_path
     end
   end
 
-  context 'when a splash exists' do
+  context "when a splash exists" do
     subject { page }
 
     given(:splash) { build :featured_splash }

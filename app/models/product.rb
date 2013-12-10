@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
-  def self.random
-    order("RANDOM()").first || OpenStruct.new
+  include Randomizable
+
+  def store_url
+    ["//store.castequality.com", url].join
   end
 end

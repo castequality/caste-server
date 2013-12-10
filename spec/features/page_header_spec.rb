@@ -10,11 +10,11 @@ end
 
 feature "The page header" do
   scenario "has the banner for the most recent project" do
-    project = create :featured_project
+    banner = create :banner_for_project
 
     visit posts_path
 
-    expect(page).to have_banner_for project
+    expect(page).to have_banner banner
   end
 
   scenario "contains the home logo link to the posts path" do

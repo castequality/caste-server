@@ -9,11 +9,14 @@
 
   aside.links#links
 
-    = store_link_to Product.random
+    - with_random_product do |product|
+      = render partial: 'products/product', locals: { product: product }
 
-    = instagram_link_to Insta::Gram.newest
+    - with_newest_instagram do |instagram|
+      = render partial: 'insta/grams/gram', locals: { gram: instagram }
 
     section.social-links
       - social_networks.each do |network_name|
         = social_link_to network_name
+
     = image_tag "brain-circle.jpg", class: ".brain-logo"

@@ -5,7 +5,7 @@ module Featureable
 
   included do
     def self.featured
-      published.find_by(featured: true) || OpenStruct.new
+      published.find_by(featured: true)
     end
   end
 end

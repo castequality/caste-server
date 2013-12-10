@@ -23,6 +23,15 @@ FactoryGirl.define do
     password_confirmation { password }
   end
 
+  factory :banner do
+    image_url       { generate :url }
+    hover_image_url { generate :url }
+
+    factory :banner_for_project do
+      association :resource, factory: :project
+    end
+  end
+
   factory :splash do
     video_url { generate :url }
 

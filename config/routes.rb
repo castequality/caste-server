@@ -6,6 +6,7 @@ CasteServer::Application.routes.draw do
   resource  :contact
   resources :posts
   resources :projects
+  resources :splashes
   resources :stockists
   resources :visuals
 

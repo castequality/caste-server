@@ -1,0 +1,10 @@
+- cache splash do
+  section.splash
+    iframe#splash.splash-video src=splash.video_url
+
+    aside.splash-text
+      span.splash-name
+        = splash.name.presence || t("splash.name", id: splash.identifier)
+
+      = link_to t("splash.link"), posts_path, id: "enter-site", class: "splash-link"
+      = image_tag "splash-brand.jpg", class: "splash-brand"
