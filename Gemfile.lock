@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: git://github.com/seanpdoyle/Flexslider-2-Rails-Gem.git
-  revision: 9b99030ebad6aa2ec2b56f7fa22be134431ee34d
+  revision: 90e79d93f5fb1e030b29c9d6f54fe58b9cafe08e
   specs:
     flexslider (2.2.0)
       sass-rails (>= 3.1.0)
