@@ -20,13 +20,6 @@ GIT
       responders (~> 1.0.0.rc)
 
 GIT
-  remote: git://github.com/prophotos/lightboxjs.git
-  revision: ef5f1a3e0d47d2e68a905165c39d06f4bfcb1401
-  specs:
-    lightboxjs (0.0.1)
-      railties (>= 3.1)
-
-GIT
   remote: git://github.com/seanpdoyle/Flexslider-2-Rails-Gem.git
   revision: 90e79d93f5fb1e030b29c9d6f54fe58b9cafe08e
   specs:
@@ -58,6 +51,13 @@ GIT
     bigcartel (1.0.6)
       hashie (>= 1.2.0)
       httparty (~> 0.8.1)
+
+GIT
+  remote: git://github.com/seanpdoyle/lightboxjs.git
+  revision: 0048c0a8c3e7eaf0f4500bd370b48f3fea7f7e23
+  specs:
+    lightboxjs (0.0.1)
+      railties (>= 3.1)
 
 GEM
   remote: https://rubygems.org/
