@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/bastiaanterhorst/rich.git
+  revision: 193a1e8b71d488ce78618783e047ca866f05534a
+  specs:
+    rich (1.4.7)
+      jquery-rails
+      kaminari
+      mime-types
+      paperclip
+      rack-raw-upload
+      rails (>= 3.2.0)
+      sass-rails
+
+GIT
   remote: git://github.com/josevalim/inherited_resources.git
   revision: e4fb9fc804488532014307190812946d63a480a3
   specs:
@@ -7,8 +20,15 @@ GIT
       responders (~> 1.0.0.rc)
 
 GIT
+  remote: git://github.com/prophotos/lightboxjs.git
+  revision: ef5f1a3e0d47d2e68a905165c39d06f4bfcb1401
+  specs:
+    lightboxjs (0.0.1)
+      railties (>= 3.1)
+
+GIT
   remote: git://github.com/seanpdoyle/Flexslider-2-Rails-Gem.git
-  revision: b4ddb5512d122bdbf5d90007b8b14ee65e8b8b24
+  revision: 17b7078fc7b09458625b1218ae2787affa010666
   specs:
     flexslider (2.2.0)
       sass-rails (>= 3.1.0)
@@ -38,26 +58,6 @@ GIT
     bigcartel (1.0.6)
       hashie (>= 1.2.0)
       httparty (~> 0.8.1)
-
-GIT
-  remote: git://github.com/seanpdoyle/lightboxjs.git
-  revision: a34f35d067ad361942bc9b66277c472ff14553bd
-  specs:
-    lightboxjs (0.0.1)
-      railties (>= 3.1)
-
-GIT
-  remote: git://github.com/seanpdoyle/rich.git
-  revision: eb606f93cce9c8edda06f88505bf170e966d0c34
-  specs:
-    rich (1.4.7)
-      jquery-rails
-      kaminari
-      mime-types
-      paperclip
-      rack-raw-upload
-      rails (>= 3.2.0)
-      sass-rails
 
 GEM
   remote: https://rubygems.org/
