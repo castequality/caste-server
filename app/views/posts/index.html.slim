@@ -10,10 +10,10 @@
   aside.links#links
 
     - with_random_product do |product|
-      = render partial: 'products/product', locals: { product: product }
+      = render 'products/product', product: product
 
     - with_newest_instagram do |instagram|
-      = render partial: 'insta/grams/gram', locals: { gram: instagram }
+      = render 'insta/grams/gram', gram: instagram
 
     section.social-links
       - social_networks.each do |network_name|
