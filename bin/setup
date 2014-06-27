@@ -3,6 +3,11 @@
 # Set up Rails app. Run this script immediately after cloning the codebase.
 # https://github.com/thoughtbot/guides/tree/master/protocol
 
+set -e
+
+# Add binstubs to PATH via export PATH=".git/safe/../../bin:$PATH" in ~/.zshenv
+mkdir -p .git/safe
+
 # Set up Ruby dependencies via Bundler
 bundle install
 
@@ -24,3 +29,7 @@ then
 else
   echo "Pow not set up but the team uses it for this project. Setup: http://goo.gl/RaDPO"
 fi
+
+# Set up staging and production git remotes
+git remote add staging git@heroku.com:caste-server-staging.git || true
+git remote add production git@heroku.com:caste-server-production.git || true

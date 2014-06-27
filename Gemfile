@@ -48,6 +48,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'foreman'
+  gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'sprockets_better_errors'
 end
 
@@ -58,7 +60,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara-webkit', '>= 1.0.0'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'shoulda-matchers'

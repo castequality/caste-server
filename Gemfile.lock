@@ -111,14 +111,14 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.1.4)
-    capybara (2.2.0)
+    capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-webkit (1.0.0)
-      capybara (~> 2.0, >= 2.0.2)
+    capybara-webkit (1.1.1)
+      capybara (>= 2.0.2, < 2.2.0)
       json
     chunky_png (1.2.9)
     climate_control (0.0.3)
@@ -230,7 +230,7 @@ GEM
     memcachier (0.0.2)
     method_source (0.8.2)
     mime-types (1.25.1)
-    mini_portile (0.5.2)
+    mini_portile (0.6.0)
     minitest (4.7.5)
     multi_json (1.8.2)
     multi_xml (0.5.5)
@@ -243,8 +243,8 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
     newrelic_rpm (3.6.9.171)
-    nokogiri (1.6.0)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     oauth (0.4.7)
     orm_adapter (0.5.0)
     paperclip (3.5.2)
@@ -335,6 +335,9 @@ GEM
       railties (>= 3.0, < 4.1)
       slim (~> 2.0)
     slop (3.4.7)
+    spring (1.1.3)
+    spring-commands-rspec (1.0.2)
+      spring (>= 0.9.1)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -393,7 +396,7 @@ DEPENDENCIES
   bigcartel!
   binding_of_caller
   bourbon
-  capybara-webkit (>= 1.0.0)
+  capybara-webkit
   coffee-rails
   compass-rails
   daemons
@@ -435,6 +438,8 @@ DEPENDENCIES
   simple_form
   simplecov
   slim-rails
+  spring
+  spring-commands-rspec
   sprockets_better_errors
   timecop
   tumblr_client

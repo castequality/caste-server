@@ -34,7 +34,9 @@ feature "The page header" do
   context "links" do
     include_context :page_for, :posts
 
-    %w[projects visuals contact stockists].each do |route|
+    it { should have_link_for  :stockists, url: "mailto:info@castequality.com" }
+
+    %w[projects visuals contact].each do |route|
       it { should have_link_for route }
     end
   end
