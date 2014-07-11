@@ -1,5 +1,6 @@
 class DeleteBannersFromProjects < ActiveRecord::Migration
   def change
-    remove_columns :projects, :banner, :banner_hover
+    remove_column :projects, :banner, :string, null: false
+    remove_column :projects, :banner_hover, :string, null: false
   end
 end
