@@ -243,7 +243,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
     newrelic_rpm (3.6.9.171)
-    nokogiri (1.6.2.1)
+    nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     oauth (0.4.7)
     orm_adapter (0.5.0)
@@ -423,6 +423,7 @@ DEPENDENCIES
   naught
   neat
   newrelic_rpm (>= 3.6.7)
+  nokogiri (= 1.6.3.1)
   paperclip
   pg
   pry

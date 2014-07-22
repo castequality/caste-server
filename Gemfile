@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.1'
 
 gem 'activeadmin', github: 'castequality/active_admin'
 gem 'airbrake'
@@ -61,6 +61,7 @@ end
 
 group :test do
   gem 'capybara-webkit'
+  gem 'nokogiri', '1.6.3.1'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'shoulda-matchers'
