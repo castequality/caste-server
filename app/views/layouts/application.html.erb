@@ -10,9 +10,9 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
-  <%= render "header" %>
-  <div class="content">
+  <main class="content">
+    <%= render "header" %>
     <%= yield %>
-  </div>
+  </main>
 </body>
 </html>

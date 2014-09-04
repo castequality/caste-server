@@ -10,19 +10,15 @@ end
 
 feature "The page header" do
   scenario "has the banner for the most recent project" do
-    banner = create :banner_for_project
+    banner = create(
+      :banner_for_project,
+      image_url: "http://placehold.it/980x300",
+      hover_image_url: "http://placehold.it/980x300",
+    )
 
     visit posts_path
 
     expect(page).to have_banner banner
-  end
-
-  scenario "contains the home logo link to the posts path" do
-    visit posts_path
-
-    find_link_for(:home).click
-
-    expect(current_path).to eq posts_path
   end
 
   scenario "contains the store link to the online store" do
@@ -33,8 +29,6 @@ feature "The page header" do
 
   context "links" do
     include_context :page_for, :posts
-
-    it { should have_link_for  :stockists, url: "mailto:info@castequality.com" }
 
     %w[projects visuals contact].each do |route|
       it { should have_link_for route }

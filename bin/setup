@@ -11,9 +11,6 @@ mkdir -p .git/safe
 # Set up Ruby dependencies via Bundler
 bundle install
 
-# Set up the database
-bundle exec rake db:setup
-
 # Set up configurable environment variables
 if [ ! -f .env ]; then
   cp .sample.env .env
@@ -33,3 +30,8 @@ fi
 # Set up staging and production git remotes
 git remote add staging git@heroku.com:caste-server-staging.git || true
 git remote add production git@heroku.com:caste-server-production.git || true
+
+if [ ! -z "$(which development)" ]; then
+  development restore production
+fi
+bin/rake db:migrate

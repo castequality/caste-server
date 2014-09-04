@@ -1,4 +1,4 @@
-$posts-width: 754px;
+$posts-width: 775px;
 
 $links-width: 205px;
 
@@ -16,7 +16,7 @@ $instagram-link-height: $links-width;
 .fixed-links {
   float: right;
   position: fixed;
-  margin-top: -138px;
+  margin-top: -356px;
   margin-left: $posts-width + $element-margin;
 }
 
@@ -30,10 +30,10 @@ $instagram-link-height: $links-width;
     float: left;
     margin-right: $element-margin;
     min-height: 1px;
-  }
 
-  &:last-child {
-    margin-right: auto;
+    &:last-child {
+      margin-right: auto;
+    }
   }
 }
 

@@ -1,77 +1,32 @@
-//= depend_on_asset "logo-hover.jpg"
+header nav {
+  position: relative;
+  left: 25%;
+  min-width: $page-width;
+  margin-top: $element-margin;
 
-$header-size: 118px;
+  text-align: justify;
+  font-size: 0.1px;
 
-$pages-width: $element-margin;
-$pages-margin: 12px;
-$page-link-margin: 15px;
-
-$banner-width: 750px;
-
-.header {
-  @include size(100% $header-size);
-  margin: {
-    left: 0;
-    top: $element-margin;
-    right: $element-margin;
-    bottom: $element-margin;
+  a {
+    display: inline-block;
+    height: $element-margin;
+    width: 140px;
+    font-size: $element-margin;
+    font-weight: 700;
+    font-variant: small-caps;
   }
 
-  .pages, .brand-logo, .banner {
-    float: left;
-    margin-right: $element-margin;
-
-    &:last-child {
-      margin-right: 0;
-    }
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
   }
-}
-
-.pages {
-  @include size($pages-width $header-size);
-
-  text-align: right;
-
-  .page-link {
-    height: 18px;
-
-    &:first-of-type {
-      margin-top: $page-link-margin;
-    }
-
-    &:last-of-type {
-      margin-bottom: $page-link-margin;
-    }
-  }
-}
-
-.page-link {
-  display: block;
-  font-weight: 700;
-  font-variant: small-caps;
 }
 
 .banner {
   @extend .hover-container;
-  @include size($banner-width 100%);
+  @include size($page-width 300px);
 
   background: $base-image-color;
-  display: block;
-}
-
-.brand-logo {
-  @include size($header-size);
-
-  display: block;
-  overflow: hidden;
-
-  background: {
-    image: image-url("logo-hover.jpg");
-    size: $header-size;
-    position: center;
-  }
-
-  img:hover {
-    opacity: 0;
-  }
+  margin-bottom: $element-margin;
 }

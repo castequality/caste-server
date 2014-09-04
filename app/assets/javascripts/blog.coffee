@@ -1,4 +1,4 @@
 $ ->
   $(".post iframe")
-    .attr("width", 754)
-    .attr("height", 430)
+    .attr("width", 775)
+    .attr("height", 432)

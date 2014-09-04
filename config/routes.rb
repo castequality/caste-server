@@ -7,7 +7,6 @@ CasteServer::Application.routes.draw do
   resources :posts
   resources :projects
   resources :splashes
-  resources :stockists
   resources :visuals
 
   root to: 'splashes#index'
