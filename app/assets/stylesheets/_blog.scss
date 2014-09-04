@@ -1,4 +1,4 @@
-$posts-width: 524px;
+$posts-width: 754px;
 
 $links-width: 205px;
 
@@ -13,19 +13,11 @@ $instagram-link-height: $links-width;
   @include size($posts-width 100%);
 }
 
-.photos {
-  @include size($header-size 100%);
-
-  .photo {
-    margin-bottom: 5px;
-  }
-}
-
 .fixed-links {
   float: right;
   position: fixed;
   margin-top: -138px;
-  margin-left: 682px;
+  margin-left: $posts-width + $element-margin;
 }
 
 .links {

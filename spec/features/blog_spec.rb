@@ -11,14 +11,6 @@ feature "The blog" do
     expect(page).not_to have_post post
   end
 
-  scenario "displays the photo feed" do
-    photo = create :photo
-
-    visit posts_path
-
-    expect(page).to have_photo photo
-  end
-
   context "has content for" do
     include_context :page_for, :posts
 
