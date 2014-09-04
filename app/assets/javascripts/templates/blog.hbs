@@ -1,0 +1,10 @@
+<img class="banner blog-banner" src="{{unbound Ember.ENV.ASSETS.banner}}" alt="banner">
+<section class="blog">
+  <section class="posts">
+    {{cloaked-collection cloakView="post" content=posts}}
+  </section>
+
+  <aside class="links" data-sticky>
+    {{ render "links" this}}
+  </aside>
+</section>

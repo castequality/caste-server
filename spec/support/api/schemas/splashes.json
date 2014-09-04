@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": ["splashes"],
+  "properties": {
+    "splashes": {
+      "type": "array",
+      "items": {
+        "required": [
+          "id",
+          "name",
+          "video_url",
+          "published_at"
+        ],
+        "properties" : {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "video_url": { "type": "string" },
+          "published_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,7 @@
+$page-width: 1000px;
+$video-width: $page-width;
+$video-height: 558px;
+
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
 $sans-serif: $helvetica;
@@ -12,12 +16,11 @@ $base-font-size: 1em;
 $base-line-height: $base-font-size;
 $base-border-radius: em(3);
 
-$page-left-margin: 92px;
 $element-margin: 20px;
 
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
-
+$base-background-color: #fff;
 $blue: #477DCA;
 $dark-gray: #333;
 $medium-gray: #7E7E7E;

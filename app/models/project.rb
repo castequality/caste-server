@@ -1,16 +1,8 @@
 class Project < ActiveRecord::Base
   include Featureable
 
-  Null = Naught.build do |config|
-    config.black_hole
-    config.mimic Project
-  end
-
-  has_many :photos, ->{ order('ordinal ASC') }, as: :imageable
-
-  def with_photos(&block)
-    photos.each(&block)
-  end
+  has_one :banner, as: :resource
+  has_many :photos, ->{ order(:ordinal) }, as: :imageable
 
   def numeral
     RomanNumerals.to_roman(id)

@@ -1,23 +1,30 @@
 class SyncsVisuals
+  def self.sync!(*args)
+    new(*args).sync!
+  end
+
   def initialize(sources = Source.all)
     @sources = sources
   end
 
   def sync!
     for_each_source do |source, visual|
+      tumblr_id = visual["id"].to_s
       photo = visual["photos"].first || {}
       sizes = photo["alt_sizes"]
       large = sizes.first["url"]
       thumbnail = sizes[2]["url"]
 
-      unless Visual.find_by(photo: large).present?
-        Visual.create \
-          source: source,
-          caption: photo["caption"],
-          photo: large,
-          thumbnail: thumbnail,
-          published_at: visual[:date]
-      end
+      record = source.visuals.find_or_initialize_by(
+        tumblr_id: tumblr_id,
+        photo: large,
+        thumbnail: thumbnail,
+      )
+
+      record.update!(
+        caption: photo["caption"],
+        published_at: visual[:date]
+      ) if record.new_record?
     end
   end
 

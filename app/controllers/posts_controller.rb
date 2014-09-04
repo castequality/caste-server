@@ -1,10 +1,7 @@
-class PostsController < InheritedResources::Base
-  NETWORKS = %w[vimeo youtube twitter facebook].freeze
+class PostsController < ApplicationController
+  def index
+    @posts = Post.all
 
-  protected
-
-    def social_networks
-      NETWORKS
-    end
-    helper_method :social_networks
+    render json: @posts
+  end
 end

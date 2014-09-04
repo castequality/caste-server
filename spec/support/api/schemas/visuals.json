@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": ["visuals"],
+  "properties": {
+    "visuals": {
+      "type": "array",
+      "items": {
+        "required": [
+          "id",
+          "photo",
+          "thumbnail",
+          "source"
+        ],
+        "properties": {
+          "id": { "type": "integer" },
+          "caption": { "type": "string" },
+          "photo": { "type": "string" },
+          "thumbnail": { "type": "string" },
+          "source": { "type": "string" }
+        }
+      }
+    }
+  }
+}

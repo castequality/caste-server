@@ -1,0 +1,14 @@
+<section class="splashes">
+  {{ render "splashes" splashes}}
+</section>
+
+<section class="visuals">
+  {{ outlet }}
+
+  {{#each bySource}}
+    <section {{bind-attr data-source=group}}>
+      {{cloaked-collection cloakView="visual" content=content
+      defaultHeight=230}}
+    </section>
+  {{/each}}
+</section>

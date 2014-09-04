@@ -1,33 +1,15 @@
-$project-width: 888px;
-$project-height: 499px;
-
-.video {
-  width: $project-width;
-  height: $project-height;
-}
-
 .project {
   position: relative;
-}
 
-.project-photo {
-  width: $project-width;
+  iframe {
+    @include size($video-width $video-height);
+  }
+
+  img {
+    width: $video-width;
+  }
 }
 
 .hidden {
   display: none;
-}
-
-.flex-direction-nav li a {
-  line-height: normal;
-  opacity: 0.5;
-  color: #fff;
-
-  &.flex-prev {
-    left: 0;
-  }
-
-  &.flex-next {
-    right: 20px;
-  }
 }

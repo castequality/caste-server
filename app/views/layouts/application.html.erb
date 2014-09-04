@@ -3,16 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="ROBOTS" content="NOODP" />
-  <title><%= page_title(app_name: t("site.app_name"), separator: t("site.separator")) %></title>
+  <title>caste quality</title>
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= render "javascript" %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
-<body>
-  <%= render "header" %>
-  <div class="content">
-    <%= yield %>
-  </div>
-</body>
+<body></body>
 </html>

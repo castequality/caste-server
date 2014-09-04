@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "required": ["projects", "photos"],
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "required": [
+          "id",
+          "name",
+          "video_url",
+          "published_at",
+          "photo_ids"
+        ],
+        "properties" : {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "video_url": { "type": "string" },
+          "published_at": { "type": "string", "format": "date-time" },
+          "photo_ids": { "type": "array" },
+          "banner": { "type": "string" },
+          "banner_hover": { "type": "string" }
+        }
+      }
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "required": [
+          "id",
+          "url",
+          "caption",
+          "thumbnail"
+        ],
+        "properties" : {
+          "id": { "type": "integer" },
+          "url": { "type": "string" },
+          "caption": { "type": "string" },
+          "thumbnail": { "type": "string" }
+        }
+      }
+    }
+  }
+}
+

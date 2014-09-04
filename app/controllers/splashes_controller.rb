@@ -1,15 +1,7 @@
-class SplashesController < InheritedResources::Base
-  layout 'splash'
-
+class SplashesController < ApplicationController
   def index
-    if featured.present?
-      redirect_to featured
-    else
-      redirect_to posts_path
-    end
-  end
+    @splashes = Splash.all
 
-  def featured
-    @featured ||= Splash.featured
+    render json: @splashes
   end
 end

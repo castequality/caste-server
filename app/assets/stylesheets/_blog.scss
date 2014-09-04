@@ -1,48 +1,55 @@
-$posts-width: 524px;
-
 $links-width: 205px;
-
-$product-link-height: 306px;
-
 $social-link-height: 40px;
 $social-link-margin: 15px;
-
+$product-link-height: 306px;
 $instagram-link-height: $links-width;
 
-.posts {
-  @include size($posts-width 100%);
+time {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.photos {
-  @include size($header-size 100%);
-
-  .photo {
-    margin-bottom: 5px;
+.posts {
+  @include size(100%);
+  @include media($medium-screen) {
+    @include size(775px 100%);
   }
 }
 
-.fixed-links {
-  float: right;
+.fixed {
   position: fixed;
-  margin-top: -138px;
-  margin-left: 682px;
+  margin-top: -354px;
 }
 
 .links {
-  @include size($links-width 100%);
-  margin-bottom: $social-link-margin;
+  display: none;
+
+  @include media($medium-screen) {
+    @include size($links-width 100%);
+    margin-bottom: $social-link-margin;
+  }
 }
 
 .blog {
-  .posts, .photos, .links {
-    float: left;
-    margin-right: $element-margin;
-    min-height: 1px;
+  .links {
+    float: right
   }
 
-  &:last-child {
-    margin-right: auto;
+  .posts, .links {
+    display: inline-block;
+    margin-right: $element-margin;
+    min-height: 1px;
+
+    &:last-child {
+      margin-right: auto;
+    }
   }
+}
+
+.blog-banner {
+  height: 300px;
 }
 
 .post {
@@ -51,11 +58,11 @@ $instagram-link-height: $links-width;
   .name {
     font-size: 1em;
     margin: 0;
+  }
 
-    .published-at {
-      margin-top: -2px;
-      float: right;
-    }
+  time {
+    margin-top: -2px;
+    float: right;
   }
 
   p {
@@ -73,7 +80,7 @@ $instagram-link-height: $links-width;
 .product-link {
   position: relative;
 
-  * {
+  p, img {
     position: absolute;
   }
 
@@ -90,23 +97,18 @@ $instagram-link-height: $links-width;
   margin-bottom: $element-margin;
   overflow: hidden;
 
-  .social-link {
+  a {
     @include link-hover;
+    @include size($social-link-height);
 
+    display: block;
     float: left;
-
     margin-right: $social-link-margin;
 
     &:last-child {
       margin: 0;
     }
   }
-}
-
-.social-link {
-  @include size($social-link-height);
-
-  display: block;
 }
 
 .product-link, .instagram-link {
@@ -139,11 +141,4 @@ $instagram-link-height: $links-width;
   .background-text {
     line-height: $instagram-link-height;
   }
-}
-
-.published-at {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
 }

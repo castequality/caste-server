@@ -1,7 +1,14 @@
-.brand {
-  font-weight: bold;
-}
+.contact {
+  text-align: center;
 
-.about {
-  line-height: 1.3em;
+  h1 {
+    font-weight: bold;
+    margin: auto;
+  }
+
+  p {
+    margin: auto;
+    line-height: 1.3em;
+    text-align: justify;
+  }
 }

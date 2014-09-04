@@ -1,9 +1,22 @@
-$page-width: 1000px;
-
 @mixin link-hover {
   padding: 0;
   img:hover {
     opacity: 0.8;
+  }
+}
+
+.hover-container {
+  display: block;
+  position: relative;
+
+  img {
+    position: absolute;
+
+    &:last-of-type {
+      &:hover {
+        opacity: 0;
+      }
+    }
   }
 }
 
@@ -25,10 +38,6 @@ iframe {
   border: none;
 }
 
-.content {
-  margin-left: $page-left-margin;
-}
-
 .background-text {
   position: absolute;
   font-weight: bold;
@@ -44,19 +53,4 @@ iframe {
 
 a[rel^=lightbox] {
   @include link-hover;
-}
-
-.hover-container {
-  display: block;
-  position: relative;
-
-  img {
-    position: absolute;
-
-    &:last-of-type {
-      &:hover {
-        opacity: 0;
-      }
-    }
-  }
 }

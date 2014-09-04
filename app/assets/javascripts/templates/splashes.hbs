@@ -1,0 +1,9 @@
+<div class="splash-dots" data-carousel>
+  <ul class="slides">
+    {{#each}}
+      <li>
+        <iframe {{bind-attr src=videoUrl}}></iframe>
+      </li>
+    {{/each}}
+  </ul>
+</div>

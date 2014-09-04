@@ -15,19 +15,10 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  [
-    FeaturesHelper,
-    ActionView::Helpers::TranslationHelper,
-    ActionView::RecordIdentifier
-  ].each do |mixin|
-    config.include mixin, type: :feature
-  end
-
   # config.fail_fast = true
   config.infer_base_class_for_anonymous_controllers = false
   config.order = 'random'
   config.use_transactional_fixtures = false
 end
 
-Capybara.javascript_driver = :webkit
 WebMock.disable_net_connect!(allow_localhost: true)

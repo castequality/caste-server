@@ -62,36 +62,36 @@ if Object.const_defined?("Rich")
     # the unprocessed file. Make sure this style exists.
     config.default_style = :thumb
 
-	# == Upload non-image files
-	#
-	# Setting this option to true will add a second Rich filebrowser icon to
-	# the editor toolbar. In this filebrowser you can upload non-image files.
-	# Inserting these files into your editor will result in a direct (A) link.
-	#
-	# Default:
-	# config.allow_document_uploads = false
+  # == Upload non-image files
+  #
+  # Setting this option to true will add a second Rich filebrowser icon to
+  # the editor toolbar. In this filebrowser you can upload non-image files.
+  # Inserting these files into your editor will result in a direct (A) link.
+  #
+  # Default:
+  # config.allow_document_uploads = false
 
-	# == Set allowed filetypes for non-image files
-	#
-	# If you want, you can restrict the types of documents that users can upload.
-	# Default behavior is to allow any kind of file to be uploaded. You can set
-	# the accepted types by providing an array of mimetypes to check against.
-	# Note that for this to have any effect, you first need to enable document
-	# uploads using the setting above.
-	#
-	# Default, allow any file to be uploaded:
-	# config.allowed_document_types = :all
-	#
-	# Example, only allow PDF uploads:
-	# config.allowed_document_types = ['application/pdf']
+  # == Set allowed filetypes for non-image files
+  #
+  # If you want, you can restrict the types of documents that users can upload.
+  # Default behavior is to allow any kind of file to be uploaded. You can set
+  # the accepted types by providing an array of mimetypes to check against.
+  # Note that for this to have any effect, you first need to enable document
+  # uploads using the setting above.
+  #
+  # Default, allow any file to be uploaded:
+  # config.allowed_document_types = :all
+  #
+  # Example, only allow PDF uploads:
+    config.allowed_document_types = %w[ image/svg+xml ]
 
-	# == Asset insertion
-	#
-	# Set this to true to keep the filebrowser open after inserting an asset.
-	# Also configurable per-use from within the filebrowser.
-	#
-	# Default:
-	# config.insert_many = false
+  # == Asset insertion
+  #
+  # Set this to true to keep the filebrowser open after inserting an asset.
+  # Also configurable per-use from within the filebrowser.
+  #
+  # Default:
+  # config.insert_many = false
 
     # == User Authentication
     #
