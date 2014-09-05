@@ -1,6 +1,6 @@
 header nav {
   position: relative;
-  left: 25%;
+  left: 14%;
   min-width: $page-width;
   margin-top: $element-margin;
 
@@ -14,6 +14,10 @@ header nav {
     font-size: $element-margin;
     font-weight: 700;
     font-variant: small-caps;
+
+    &.logo {
+      margin-right: 85px;
+    }
   }
 
   &:after {

@@ -1,9 +1,13 @@
 header
   nav
-    = header_link_to :projects
-    = header_link_to :visuals
-    = header_link_to :contact
-    = header_link_to :store, store_url
+    = link_to t(".projects"), projects_path
+    = link_to t(".visuals"), visuals_path
+
+    = link_to posts_path, class: "logo" do
+      = image_tag "header_logo.png"
+
+    = link_to t(".contact"), contact_path
+    = link_to t(".store"), store_url
 
   - with_random_banner do |banner|
     = render "banners/banner", banner: banner
