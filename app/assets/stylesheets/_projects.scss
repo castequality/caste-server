@@ -1,5 +1,5 @@
-$project-width: 888px;
-$project-height: 499px;
+$project-width: 1000px;
+$project-height: 558px;
 
 .video {
   width: $project-width;
@@ -24,10 +24,10 @@ $project-height: 499px;
   color: #fff;
 
   &.flex-prev {
-    left: 0;
+    left: $element-margin;
   }
 
   &.flex-next {
-    right: 20px;
+    right: $element-margin;
   }
 }
