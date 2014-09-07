@@ -1,29 +1,16 @@
 header nav {
-  position: relative;
-  left: 14%;
   min-width: $page-width;
   margin-top: $element-margin;
-
-  text-align: justify;
-  font-size: 0.1px;
+  margin-bottom: $element-margin;
+  margin-left: $element-margin * -1;
+  text-align: center;
 
   a {
-    display: inline-block;
     height: $element-margin;
-    width: 140px;
+    margin: auto ($element-margin * 2);
     font-size: $element-margin;
     font-weight: 700;
     font-variant: small-caps;
-
-    &.logo {
-      margin-right: 85px;
-    }
-  }
-
-  &:after {
-    content: "";
-    width: 100%;
-    display: inline-block;
   }
 }
 
