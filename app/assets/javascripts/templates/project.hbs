@@ -1,0 +1,10 @@
+<ul>
+  {{#each photos}}
+    <li>
+      <img {{bind-attr src=url alt=url}}>
+    </li>
+  {{/each}}
+  <li>
+    <iframe {{bind-attr src=videoUrl}}></iframe>
+  </li>
+</ul>

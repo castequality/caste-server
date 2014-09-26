@@ -4,6 +4,9 @@ App.Router.reopen(location: "history")
 
 App.Router.map ->
   @resource("blog", path: "/")
+  @resource("projects", ->
+    @route("show", path: ":id")
+  )
   @resource("visuals", ->
     @route("show", path: ":id")
   )

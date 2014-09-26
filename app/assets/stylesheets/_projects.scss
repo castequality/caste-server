@@ -1,17 +1,17 @@
 $project-width: 1000px;
 $project-height: 558px;
 
-.video {
-  width: $project-width;
-  height: $project-height;
-}
-
 .project {
   position: relative;
-}
 
-.project-photo {
-  width: $project-width;
+  iframe {
+    width: $project-width;
+    height: $project-height;
+  }
+
+  img {
+    width: $project-width;
+  }
 }
 
 .hidden {

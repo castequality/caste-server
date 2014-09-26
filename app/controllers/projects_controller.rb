@@ -1,15 +1,7 @@
 class ProjectsController < InheritedResources::Base
   def index
-    redirect_to featured_project, params
-  end
+    @projects = Project.all
 
-  def video_first?
-    params[:video].presence
+    render json: @projects
   end
-  helper_method :video_first?
-
-  def video_last?
-    ! video_first?
-  end
-  helper_method :video_last?
 end
