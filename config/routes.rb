@@ -4,10 +4,10 @@ CasteServer::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   scope :api, constraints: { format: :json } do
-    resources :posts
+    resources :posts, only: [:index]
     resources :projects
-    resources :splashes
-    resources :visuals
+    resources :splashes, only: [:index]
+    resources :visuals, only: [:index]
   end
 
   get "*path" => "embers#index"

@@ -1,4 +1,6 @@
 <section class="visuals">
+  <iframe {{bind-attr src=randomSplash.videoUrl}}></iframe>
+
   {{#each bySource}}
     <section {{bind-attr data-source=group}}>
       {{cloaked-collection cloakView="visual" content=content

@@ -1,8 +1,11 @@
-App.VisualsController = Ember.ArrayController.extend
-  bySource: Ember.computed "content.@each.source", ->
+App.VisualsController = Ember.ObjectController.extend
+  randomSplash: Ember.computed "splashes.[]", ->
+    _.sample(@get("splashes.content"))
+
+  bySource: Ember.computed "visuals.@each.source", ->
     result = []
 
-    @get("content").forEach (item) ->
+    @get("visuals").forEach (item) ->
       hasGroup = result.findBy("group", item.get("source"))
 
       unless hasGroup?

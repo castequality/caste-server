@@ -1,3 +1,6 @@
 App.VisualsRoute = Ember.Route.extend
   model: ->
-    @store.find("visual")
+    Ember.RSVP.hash(
+      splashes: @store.find("splash")
+      visuals: @store.find("visual")
+    )

@@ -1,7 +1,12 @@
 $visual-width: 230px;
 
 .visuals {
-  section {
+  iframe {
+    width: 1000px;
+    height: 570px;
+    margin-bottom: $element-margin;
+  }
+  section[data-source] {
     @include size($visual-width auto);
 
     margin-right: $element-margin;
