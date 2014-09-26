@@ -1,7 +1,8 @@
 <section class="visuals">
   {{#each bySource}}
     <section {{bind-attr data-source=group}}>
-      {{cloaked-collection cloakView="visual" content=content}}
+      {{cloaked-collection cloakView="visual" content=content
+      defaultHeight=230}}
     </section>
   {{/each}}
 </section>

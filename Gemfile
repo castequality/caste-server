@@ -53,18 +53,17 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'foreman'
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'spring-commands-teaspoon'
-  gem 'sprockets_better_errors'
 end
 
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
-  gem 'rspec-rails', '>= 2.14'
-  gem 'teaspoon'
   gem 'rails-assets-jquery-mockjax'
+  gem 'rspec-rails', '>= 2.14'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-teaspoon'
+  gem 'teaspoon'
 end
 
 group :test do
