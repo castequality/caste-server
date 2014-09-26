@@ -1,5 +1,5 @@
 <div class="visual">
-  <a {{bind-attr src=photo title=caption}} rel="visuals">
+  {{#link-to "visuals.show" this}}
     <img {{bind-attr src=thumbnail}}
-  </a>
+  {{/link-to}}
 </div>

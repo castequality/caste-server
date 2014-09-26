@@ -8,7 +8,7 @@ module ApplicationHelper
 
   def instagram_hash
     {
-      client_id: "d9a94e06adaa4f059f3b4595b365a69a",
+      client_id: ENV["INSTAGRAM_CLIENT_ID"],
       user: "259689659",
     }
   end

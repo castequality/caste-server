@@ -1,4 +1,6 @@
 <section class="visuals">
+  {{ outlet }}
+
   <iframe {{bind-attr src=randomSplash.videoUrl}}></iframe>
 
   {{#each bySource}}
