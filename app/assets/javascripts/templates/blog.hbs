@@ -1,0 +1,21 @@
+<section class="blog">
+  <section class="posts">
+    {{cloaked-collection cloakView="post" content=posts}}
+  </section>
+  <aside class="links">
+    <a {{bind-attr href=product.url}} class="product-link" target="_blank">
+      <p class="background-text">store</p>
+      <img class="hover-image" {{bind-attr src=product.image}}>
+    </a>
+
+    <a {{bind-attr href=instagram.link}} class="instagram-link" target="_blank">
+      <p class="background-text">instagram</p>
+      <img class="hover-image" {{bind-attr
+      src=instagram.images.low_resolution.url}}>
+    </a>
+
+    {{partial "social"}}
+
+    <img class="brain-logo" src="{{unbound Ember.ENV.ASSETS.brain}}" alt="brain">
+  </aside>
+</section>

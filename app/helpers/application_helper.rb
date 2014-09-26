@@ -2,6 +2,14 @@ module ApplicationHelper
   def preload_env
     {
       "ASSETS" => asset_hash,
+      "INSTAGRAM" => instagram_hash,
+    }
+  end
+
+  def instagram_hash
+    {
+      client_id: "d9a94e06adaa4f059f3b4595b365a69a",
+      user: "259689659",
     }
   end
 

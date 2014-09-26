@@ -1,5 +1,6 @@
 #= require jquery
 #= require moment
+#= require lodash
 #= require handlebars
 #= require ember
 #= require ember-cloaking
