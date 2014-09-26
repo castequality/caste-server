@@ -1,3 +1,5 @@
 App.BlogController = Ember.ObjectController.extend
-  product: Ember.computed "products.[]", ->
-    _.sample(@get("products").get("content"))
+  activeProducts: Ember.computed.filterBy("products", "status", "active")
+
+  product: Ember.computed "activeProducts.[]", ->
+    _.sample(@get("activeProducts"))
