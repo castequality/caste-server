@@ -1,13 +1,16 @@
 $posts-width: 775px;
-
 $links-width: 205px;
-
-$product-link-height: 306px;
-
 $social-link-height: 40px;
 $social-link-margin: 15px;
-
+$product-link-height: 306px;
 $instagram-link-height: $links-width;
+
+time {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 .posts {
   @include size($posts-width 100%);
@@ -26,8 +29,12 @@ $instagram-link-height: $links-width;
 }
 
 .blog {
-  .posts, .photos, .links {
-    float: left;
+  .links {
+    float: right
+  }
+
+  .posts, .links {
+    display: inline-block;
     margin-right: $element-margin;
     min-height: 1px;
 
@@ -43,11 +50,11 @@ $instagram-link-height: $links-width;
   .name {
     font-size: 1em;
     margin: 0;
+  }
 
-    .published-at {
-      margin-top: -2px;
-      float: right;
-    }
+  time {
+    margin-top: -2px;
+    float: right;
   }
 
   p {
@@ -82,23 +89,18 @@ $instagram-link-height: $links-width;
   margin-bottom: $element-margin;
   overflow: hidden;
 
-  .social-link {
+  a {
     @include link-hover;
+    @include size($social-link-height);
 
+    display: block;
     float: left;
-
     margin-right: $social-link-margin;
 
     &:last-child {
       margin: 0;
     }
   }
-}
-
-.social-link {
-  @include size($social-link-height);
-
-  display: block;
 }
 
 .product-link, .instagram-link {
@@ -131,11 +133,4 @@ $instagram-link-height: $links-width;
   .background-text {
     line-height: $instagram-link-height;
   }
-}
-
-.published-at {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
 }

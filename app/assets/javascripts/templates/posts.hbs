@@ -1,0 +1,16 @@
+<section class="blog">
+  <section class="posts">
+    {{cloaked-collection cloakView="post" content=model}}
+  </section>
+  <aside class="links">
+    <!-- &#45; with_random_product do |product| -->
+    <!--   = render 'products/product', product: product -->
+    <!--  -->
+    <!-- &#45; with_newest_instagram do |instagram| -->
+    <!--   = render 'insta/grams/gram', gram: instagram -->
+
+    {{partial "social"}}
+
+    <img class="brain-logo" src="{{unbound Ember.ENV.ASSETS.brain}}" alt="brain">
+  </aside>
+</section>

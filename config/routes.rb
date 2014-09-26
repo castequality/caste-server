@@ -3,11 +3,15 @@ CasteServer::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resource  :contact
-  resources :posts
-  resources :projects
-  resources :splashes
-  resources :visuals
+  scope constraints: { format: :json } do
+    resources :posts
+    resources :projects
+    resources :splashes
+    resources :visuals
+  end
 
-  root to: 'splashes#index'
+  scope constraints: { format: :html } do
+    get "*" => "embers#index"
+  end
+  root "embers#index"
 end

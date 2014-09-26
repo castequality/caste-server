@@ -1,17 +1,19 @@
 module ApplicationHelper
-  def featured_project_path
-    project_path(featured_project, video: true)
+  def preload_env
+    {
+      "ASSETS" => asset_hash,
+    }
   end
 
-  def with_newest_instagram(&block)
-    yield Insta::Gram.newest if block_given?
-  end
-
-  def with_random_product(&block)
-    yield Product.random if block_given?
-  end
-
-  def with_random_banner(&block)
-    yield Banner.random if block_given?
+  def asset_hash
+    {
+      banner: image_url("banners/walt.png"),
+      brain: image_url("brain.png"),
+      logo: image_url("header_logo.png"),
+      social_vimeo: image_url("social/vimeo.png"),
+      social_youtube: image_url("social/youtube.png"),
+      social_twitter: image_url("social/twitter.png"),
+      social_facebook: image_url("social/facebook.png"),
+    }
   end
 end

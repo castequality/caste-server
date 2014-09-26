@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": ["posts"],
+  "properties": {
+    "posts": {
+      "type": "array",
+      "items": {
+        "required": [
+          "id",
+          "body",
+          "name",
+          "published_at"
+        ],
+        "properties" : {
+          "id": { "type": "integer" },
+          "body": { "type": "string" },
+          "name": { "type": "string" },
+          "published_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

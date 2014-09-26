@@ -1,3 +1,4 @@
+<%= javascript_tag("window.ENV = #{preload_env.to_json.html_safe}") %>
 <%= javascript_include_tag 'application' %>
 
 <%= yield :javascript %>
