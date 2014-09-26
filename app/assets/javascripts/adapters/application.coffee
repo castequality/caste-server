@@ -1,1 +1,2 @@
-App.ApplicationAdapter = DS.ActiveModelAdapter.extend()
+App.ApplicationAdapter = DS.ActiveModelAdapter.extend
+  namespace: "api"

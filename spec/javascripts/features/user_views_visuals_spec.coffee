@@ -18,4 +18,4 @@ test "User views visuals sorted into columns by sources", ->
     equal(imageFrom("zandertaketomo"), "zandertaketomo.jpg")
 
 imageFrom = (source) ->
-  find(".#{source} img").prop("src")
+  find("[data-source='#{source}'] img").attr("src")
