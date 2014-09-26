@@ -1,3 +1,4 @@
 App.ProjectsIndexRoute = Ember.Route.extend
   model: ->
-    @modelFor("projects").get("firstObject")
+    newestProject = @modelFor("projects").get("firstObject")
+    @transitionTo("projects.show", newestProject)

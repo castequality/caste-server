@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140711165827) do
+ActiveRecord::Schema.define(version: 20140926224441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,18 +76,11 @@ ActiveRecord::Schema.define(version: 20140711165827) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
-  create_table "instagrams", force: true do |t|
-    t.string   "url",        null: false
-    t.string   "thumbnail",  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "photos", force: true do |t|
-    t.string   "url",                        null: false
-    t.string   "thumbnail",                  null: false
-    t.string   "caption"
-    t.integer  "ordinal",        default: 0, null: false
+    t.string   "url",                         null: false
+    t.string   "thumbnail",                   null: false
+    t.string   "caption",        default: ""
+    t.integer  "ordinal",        default: 0,  null: false
     t.integer  "imageable_id"
     t.string   "imageable_type"
     t.datetime "created_at"
@@ -103,13 +96,6 @@ ActiveRecord::Schema.define(version: 20140711165827) do
   end
 
   add_index "posts", ["name"], name: "index_posts_on_name", unique: true, using: :btree
-
-  create_table "products", force: true do |t|
-    t.string   "url",        null: false
-    t.string   "thumbnail",  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "projects", force: true do |t|
     t.string   "name",                        null: false
@@ -151,17 +137,19 @@ ActiveRecord::Schema.define(version: 20140711165827) do
   end
 
   create_table "visuals", force: true do |t|
-    t.string   "photo",        null: false
-    t.string   "thumbnail",    null: false
-    t.datetime "published_at", null: false
-    t.string   "caption"
+    t.string   "photo",                     null: false
+    t.string   "thumbnail",                 null: false
+    t.datetime "published_at",              null: false
+    t.string   "caption",      default: ""
     t.integer  "source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tumblr_id",                 null: false
   end
 
   add_index "visuals", ["photo"], name: "index_visuals_on_photo", unique: true, using: :btree
   add_index "visuals", ["source_id"], name: "index_visuals_on_source_id", using: :btree
   add_index "visuals", ["thumbnail"], name: "index_visuals_on_thumbnail", unique: true, using: :btree
+  add_index "visuals", ["tumblr_id"], name: "index_visuals_on_tumblr_id", unique: true, using: :btree
 
 end

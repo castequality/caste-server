@@ -3,9 +3,11 @@ class Visual < ActiveRecord::Base
 
   belongs_to :source, touch: true
 
-  delegate :name, to: :source, prefix: true, allow_nil: true
+  def source_name
+    source.name
+  end
 
-  def classes
-    ["visual", source_name].reject(&:blank?).join('-')
+  def caption
+    super.to_s
   end
 end
