@@ -1,23 +1,21 @@
 #= require spec_helper
 
 test "User views visuals sorted into columns by sources", ->
-  stubApi "/sources/chrismulhern/visuals", [
-    { id: 1, url: "chrismulhern.jpg" }
-  ]
-  stubApi "/sources/devonjconnell/visuals", [
-    { id: 2, url: "devonjconnell.jpg" }
-  ]
-  stubApi "/sources/waltwolfe/visuals", [
-    { id: 3, url: "waltwolfe.jpg" }
-  ]
-  stubApi "/sources/zandertaketomo/visuals", [
-    { id: 4, url: "zandertaketomo.jpg" }
+  stubApi "/visuals", visuals: [
+    {id: 1, source: "chrismulhern", thumbnail: "chrismulhern.jpg" }
+    {id: 2, source: "devonjconnell", thumbnail: "devonjconnell.jpg" }
+    {id: 3, source: "waltwolfe", thumbnail: "waltwolfe.jpg" }
+    {id: 4, source: "zandertaketomo", thumbnail: "zandertaketomo.jpg" }
   ]
 
   visit("/")
-  click("VISUALS")
+  click("a:contains('VISUALS')")
 
   andThen ->
-    ["chrismulhern", "devonjconnell", "waltwolfe", "zandertaketomo"].forEach (source)->
-      imageSrc = find(".#{source} img").prop("src")
-      equal(imageSrc, "#{source}.jpg")
+    equal(imageFrom("chrismulhern"), "chrismulhern.jpg")
+    equal(imageFrom("devonjconnell"), "devonjconnell.jpg")
+    equal(imageFrom("waltwolfe"), "waltwolfe.jpg")
+    equal(imageFrom("zandertaketomo"), "zandertaketomo.jpg")
+
+imageFrom = (source) ->
+  find(".#{source} img").prop("src")

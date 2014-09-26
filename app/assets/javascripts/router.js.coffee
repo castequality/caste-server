@@ -4,3 +4,4 @@ App.Router.reopen(location: "history")
 
 App.Router.map ->
   @resource("posts", path: "/")
+  @resource("visuals")

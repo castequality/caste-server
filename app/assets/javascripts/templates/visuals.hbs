@@ -1,0 +1,7 @@
+<section class="visuals">
+  {{#each bySource}}
+    <section {{bind-attr class=group}}>
+      {{cloaked-collection cloakView="visual" content=content}}
+    </section>
+  {{/each}}
+</section>

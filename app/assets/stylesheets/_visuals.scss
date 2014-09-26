@@ -1,11 +1,24 @@
 $visual-width: 230px;
 
 .visuals {
-  @include columns($visual-width);
-  @include column-gap(0);
+  section {
+    @include size($visual-width auto);
+
+    margin-right: $element-margin;
+    display: inline-block;
+    float: right;
+
+    &:first-of-type {
+      margin-right: 0;
+    }
+
+    &:last-of-type {
+      float: none;
+    }
+  }
 
   .visual {
-    @include size($visual-width auto);
-    margin-bottom: 16px;
+    @include size(100% auto);
+    margin-bottom: $element-margin;
   }
 }
