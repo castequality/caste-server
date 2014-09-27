@@ -18,10 +18,15 @@ $project-height: 558px;
   display: none;
 }
 
+.flexslider {
+  border: none;
+  box-shadow: none;
+}
+
 .flex-direction-nav li a {
   line-height: normal;
-  opacity: 0.5;
-  color: #fff;
+  opacity: 0.3;
+  color: #f0f0f0;
 
   &.flex-prev {
     left: $element-margin;

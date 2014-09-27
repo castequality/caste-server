@@ -1,10 +1,12 @@
-<ul>
-  {{#each photos}}
+<div class="flexslider">
+  <ul class="slides">
+    {{#each photos}}
+      <li>
+        <img {{bind-attr src=url alt=url}}>
+      </li>
+    {{/each}}
     <li>
-      <img {{bind-attr src=url alt=url}}>
+      <iframe {{bind-attr src=videoUrl}}></iframe>
     </li>
-  {{/each}}
-  <li>
-    <iframe {{bind-attr src=videoUrl}}></iframe>
-  </li>
-</ul>
+  </ul>
+</div>

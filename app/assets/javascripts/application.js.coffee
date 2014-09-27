@@ -1,4 +1,5 @@
 #= require jquery
+#= require jquery.flexslider
 #= require moment
 #= require lodash
 #= require handlebars
