@@ -2,13 +2,17 @@ $visual-width: 230px;
 
 .splashes {
   position: relative;
-  margin-bottom: -5px;
+  margin-bottom: 24px;
   text-align: center;
   font-variant: small-caps;
 
   iframe {
     @include size($video-width $video-height);
     margin-bottom: $element-margin;
+  }
+
+  .flex-control-nav {
+    bottom: -12px;
   }
 }
 

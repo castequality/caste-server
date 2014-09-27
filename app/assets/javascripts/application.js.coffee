@@ -1,5 +1,7 @@
 #= require jquery
 #= require jquery.flexslider
+#= require jquery.scrollspy
+#= require jquery.inview
 #= require moment
 #= require lodash
 #= require handlebars

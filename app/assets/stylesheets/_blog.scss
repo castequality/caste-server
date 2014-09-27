@@ -1,4 +1,3 @@
-$posts-width: 775px;
 $links-width: 205px;
 $social-link-height: 40px;
 $social-link-margin: 15px;
@@ -13,14 +12,12 @@ time {
 }
 
 .posts {
-  @include size($posts-width 100%);
+  @include size(775px 100%);
 }
 
-.fixed-links {
-  float: right;
+.fixed {
   position: fixed;
-  margin-top: -383px;
-  margin-left: $posts-width + $element-margin;
+  margin-top: -364px;
 }
 
 .links {
@@ -72,7 +69,7 @@ time {
 .product-link {
   position: relative;
 
-  * {
+  p, img {
     position: absolute;
   }
 
