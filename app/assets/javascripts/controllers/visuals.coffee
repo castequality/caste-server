@@ -1,7 +1,4 @@
 App.VisualsController = Ember.ObjectController.extend
-  randomSplash: Ember.computed "splashes.[]", ->
-    _.sample(@get("splashes.content"))
-
   bySource: Ember.computed "visuals.@each.source", ->
     result = []
 

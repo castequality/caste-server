@@ -1,7 +1,9 @@
+<section class="splashes">
+  {{ render "splashes" splashes}}
+</section>
+
 <section class="visuals">
   {{ outlet }}
-
-  <iframe {{bind-attr src=randomSplash.videoUrl}}></iframe>
 
   {{#each bySource}}
     <section {{bind-attr data-source=group}}>

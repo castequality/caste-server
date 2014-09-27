@@ -1,5 +1,4 @@
 App.Product = DS.Model.extend
-  toParam: DS.attr("string")
   status: DS.attr("string")
   url: DS.attr("string")
   images: DS.attr("object")

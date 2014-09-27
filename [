@@ -1,7 +1,0 @@
-class PostSerializer < ActiveModel::Serializer
-  attributes :id, :body, :name, :published_at, :to_param
-
-  def to_param
-    object.name.to_s.parameterize
-  end
-end

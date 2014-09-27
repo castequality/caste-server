@@ -1,11 +1,18 @@
 $visual-width: 230px;
 
-.visuals {
+.splashes {
+  position: relative;
+  margin-bottom: -5px;
+  text-align: center;
+  font-variant: small-caps;
+
   iframe {
-    width: 1000px;
-    height: 570px;
+    @include size($video-width $video-height);
     margin-bottom: $element-margin;
   }
+}
+
+.visuals {
   section[data-source] {
     @include size($visual-width auto);
 

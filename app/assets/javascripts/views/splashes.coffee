@@ -1,3 +1,3 @@
-App.ProjectView = Ember.View.extend
+App.SplashesView = Ember.View.extend
   didInsertElement: ->
     $("[data-carousel]").flexslider()
