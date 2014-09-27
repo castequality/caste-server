@@ -68,6 +68,7 @@ FactoryGirl.define do
   end
 
   factory :visual do
+    sequence(:tumblr_id)
     photo     { generate :url }
     thumbnail { generate :url }
 

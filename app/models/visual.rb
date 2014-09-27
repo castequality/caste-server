@@ -6,8 +6,4 @@ class Visual < ActiveRecord::Base
   def source_name
     source.name
   end
-
-  def caption
-    super.to_s
-  end
 end
