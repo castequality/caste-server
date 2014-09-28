@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'activeadmin', github: 'castequality/active_admin'
 gem 'active_model_serializers', '0.8.2'
