@@ -5,9 +5,10 @@
   <meta name="ROBOTS" content="NOODP" />
   <title>caste quality</title>
   <%= stylesheet_link_tag "application", media: "all" %>
-  <%= render "javascript" %>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
-<body></body>
+<body>
+  <%= render "javascript" %>
+</body>
 </html>
