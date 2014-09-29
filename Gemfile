@@ -5,7 +5,6 @@ ruby '2.1.2'
 
 gem 'activeadmin', github: 'castequality/active_admin'
 gem 'active_model_serializers', '0.8.2'
-gem 'asset_sync'
 gem 'aws-sdk'
 gem 'bourbon'
 gem 'coffee-rails'
@@ -67,6 +66,7 @@ group :test do
 end
 
 group :staging, :production do
+  gem 'heroku_rails_deflate'
   gem 'newrelic_rpm', '>= 3.6.7'
   gem 'rails_12factor'
 end
