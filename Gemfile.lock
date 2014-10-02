@@ -220,6 +220,7 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
     rack (1.5.2)
+    rack-cors (0.2.9)
     rack-raw-upload (1.1.1)
       multi_json
     rack-test (0.6.2)
@@ -372,6 +373,7 @@ DEPENDENCIES
   paperclip
   pg
   pry
+  rack-cors
   rack-timeout
   rails (>= 4.0.1)
   rails-assets-ember-cloaking

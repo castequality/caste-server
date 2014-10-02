@@ -12,6 +12,13 @@ Bundler.require(:default, Rails.env)
 
 module CasteServer
   class Application < Rails::Application
+    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
+      allow do
+        origins "*"
+        resource "/assets/*", headers: :any, methods: :get
+      end
+    end
+
     config.active_record.default_timezone = :utc
 
     config.generators do |generate|
