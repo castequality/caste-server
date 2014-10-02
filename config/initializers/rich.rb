@@ -28,10 +28,9 @@ if Object.const_defined?("Rich")
     # remember to re-generate your styles by running:
     #   rake rich:refresh_assets
     config.image_styles = {
-      thumb:    "100x100#",
-      blog:     "600x600>",
+      blog:     "1000x1000>",
       project:  "1024x1024>",
-      banner:   "750x118#"
+      banner:   "1000x300>"
     }
 
     # == Convert options

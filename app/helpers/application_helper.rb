@@ -17,7 +17,9 @@ module ApplicationHelper
     {
       banner: image_url("banners/walt.png"),
       brain: image_url("brain.png"),
+      brain_hi_res: image_url("brain_hi_res.png"),
       logo: image_url("header_logo.png"),
+      script_logo: image_url("script_logo.png"),
       social_vimeo: image_url("social/vimeo.png"),
       social_youtube: image_url("social/youtube.png"),
       social_twitter: image_url("social/twitter.png"),
