@@ -1,3 +1,4 @@
+$links-offset: -618px;
 $links-width: 205px;
 $social-link-height: 40px;
 $social-link-margin: 15px;
@@ -20,7 +21,7 @@ time {
 
 .fixed {
   position: fixed;
-  margin-top: -354px;
+  margin-top: $links-offset;
 }
 
 .links {
@@ -49,7 +50,7 @@ time {
 }
 
 .blog-banner {
-  height: 300px;
+  height: 568px;
   margin-bottom: 16px;
 }
 

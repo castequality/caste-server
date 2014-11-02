@@ -20,10 +20,23 @@ module ApplicationHelper
       brain_hi_res: image_url("brain_hi_res.png"),
       logo: image_url("header_logo.png"),
       script_logo: image_url("script_logo.png"),
-      social_vimeo: image_url("social/vimeo.png"),
-      social_youtube: image_url("social/youtube.png"),
-      social_twitter: image_url("social/twitter.png"),
-      social_facebook: image_url("social/facebook.png"),
+      social: social_hash,
+      lookbooks: lookbooks_hash,
+    }
+  end
+
+  def lookbooks_hash
+    {
+      fall2014: 5.times.map { |i| image_url("lookbooks/fall2014/#{i + 1}.jpg") },
+    }
+  end
+
+  def social_hash
+    {
+      vimeo: image_url("social/vimeo.png"),
+      youtube: image_url("social/youtube.png"),
+      twitter: image_url("social/twitter.png"),
+      facebook: image_url("social/facebook.png"),
     }
   end
 end

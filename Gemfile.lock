@@ -131,7 +131,7 @@ GEM
       dotenv (= 0.9.0)
     email_validator (1.4.0)
       activemodel
-    ember-data-source (1.0.0.beta.10)
+    ember-data-source (1.0.0.beta.11)
       ember-source
     ember-rails (0.14.1)
       active_model_serializers
@@ -142,7 +142,7 @@ GEM
       handlebars-source
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
-    ember-source (1.7.0)
+    ember-source (1.8.0)
       handlebars-source (~> 1.0)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -234,13 +234,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.1)
       sprockets-rails (~> 2.0.0)
-    rails-assets-ember (1.7.0)
-      rails-assets-handlebars (>= 1.0.0, < 2.0.0)
-      rails-assets-jquery (>= 1.7.0, < 2.2.0)
-    rails-assets-ember-cloaking (1.0.0.beta3)
-      rails-assets-ember (>= 1.3.0)
-    rails-assets-handlebars (1.3.0)
-    rails-assets-jquery (2.1.1)
     rails-assets-jquery-mockjax (1.5.3)
     rails-assets-lodash (2.4.1)
     rails-assets-moment (2.8.3)
@@ -356,9 +349,9 @@ DEPENDENCIES
   delayed_job_active_record (>= 4.0.0)
   dotenv-rails
   email_validator
-  ember-data-source (= 1.0.0.beta.10)
+  ember-data-source (= 1.0.0.beta.11)
   ember-rails
-  ember-source (= 1.7.0)
+  ember-source (= 1.8.0)
   factory_girl_rails
   flexslider!
   foreman
@@ -376,7 +369,6 @@ DEPENDENCIES
   rack-cors
   rack-timeout
   rails (>= 4.0.1)
-  rails-assets-ember-cloaking
   rails-assets-jquery-mockjax
   rails-assets-lodash
   rails-assets-moment

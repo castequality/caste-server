@@ -1,3 +1,5 @@
 App.SplashesView = Ember.View.extend
+  classNameBindings: [":carousel"]
+
   didInsertElement: ->
-    $("[data-carousel]").flexslider(slideshow: false)
+    @$().flexslider(slideshow: false)

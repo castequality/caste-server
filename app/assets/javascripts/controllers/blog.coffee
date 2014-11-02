@@ -3,3 +3,5 @@ App.BlogController = Ember.ObjectController.extend
 
   product: Ember.computed "activeProducts.[]", ->
     _.sample(@get("activeProducts"))
+
+  banners: Ember.ENV.ASSETS.lookbooks.fall2014

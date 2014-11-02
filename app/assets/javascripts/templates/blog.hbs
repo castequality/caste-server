@@ -1,4 +1,13 @@
-<img class="banner blog-banner" src="{{unbound Ember.ENV.ASSETS.banner}}" alt="banner">
+<div class="carousel no-dots" data-carousel>
+  <ul class="slides">
+    {{#each Ember.ENV.ASSETS.lookbooks.fall2014}}
+      <li>
+        <img class="banner blog-banner" src="{{unbound this}}" alt="banner">
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
 <section class="blog">
   <section class="posts">
     {{cloaked-collection cloakView="post" content=posts}}
