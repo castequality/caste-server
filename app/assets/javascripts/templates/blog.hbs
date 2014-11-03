@@ -1,8 +1,8 @@
 <div class="carousel no-dots" data-carousel>
   <ul class="slides">
-    {{#each Ember.ENV.ASSETS.lookbooks.fall2014}}
+    {{#each banner in banners}}
       <li>
-        <img class="banner blog-banner" src="{{unbound this}}" alt="banner">
+        <img class="banner blog-banner" src="{{unbound banner}}" alt="banner">
       </li>
     {{/each}}
   </ul>
