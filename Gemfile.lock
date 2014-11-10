@@ -74,10 +74,10 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
-    barber (0.4.2)
+    barber (0.5.0)
       ember-source
       execjs
-      handlebars-source
+      handlebars-source (>= 1.0.0.rc.4)
     bcrypt (3.1.7)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
@@ -88,7 +88,7 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.1.4)
-    chunky_png (1.2.9)
+    chunky_png (1.3.3)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -105,7 +105,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    compass-rails (1.1.2)
+    compass-rails (2.0.0)
       compass (>= 0.12.2)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
@@ -133,13 +133,13 @@ GEM
       activemodel
     ember-data-source (1.0.0.beta.11)
       ember-source
-    ember-rails (0.14.1)
+    ember-rails (0.15.0)
       active_model_serializers
       barber (>= 0.4.1)
-      ember-data-source
-      ember-source
+      ember-data-source (>= 1.0.0.beta.5)
+      ember-source (>= 1.1.0)
       execjs (>= 1.2)
-      handlebars-source
+      handlebars-source (> 1.0.0)
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
     ember-source (1.8.0)
@@ -257,6 +257,7 @@ GEM
       polyamorous (~> 1.0.0)
     recipient_interceptor (0.1.2)
       mail
+    redis (3.1.0)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     roman-numerals (0.3.0)
@@ -374,6 +375,7 @@ DEPENDENCIES
   rails-assets-moment
   rails_12factor
   recipient_interceptor
+  redis
   rich!
   roman-numerals
   rspec-rails (>= 2.14)

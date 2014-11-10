@@ -1,2 +1,0 @@
-class EmbersController < ApplicationController
-end

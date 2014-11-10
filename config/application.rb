@@ -12,6 +12,7 @@ Bundler.require(:default, Rails.env)
 
 module CasteServer
   class Application < Rails::Application
+    config.middleware.use "Rack::Deflater"
     config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
       allow do
         origins "*"

@@ -6,10 +6,10 @@ CasteServer::Application.routes.draw do
   scope :api, constraints: { format: :json } do
     resources :posts, only: [:index]
     resources :projects
+    resources :lookbooks, only: [:index]
     resources :splashes, only: [:index]
     resources :visuals, only: [:index]
   end
 
-  get "*path" => "embers#index"
-  root "embers#index"
+  root to: "redis#index"
 end

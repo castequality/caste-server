@@ -29,9 +29,11 @@ gem 'rack-timeout'
 gem 'rails', '>= 4.0.1'
 gem 'rails-assets-lodash'
 gem 'rails-assets-moment'
+gem 'rails_12factor'
 gem 'rich', github: 'bastiaanterhorst/rich'
 gem 'roman-numerals'
 gem 'recipient_interceptor'
+gem 'redis'
 gem 'sass-rails'
 gem 'tumblr_client'
 gem 'uglifier'
@@ -67,5 +69,4 @@ end
 group :staging, :production do
   gem 'heroku_rails_deflate'
   gem 'newrelic_rpm', '>= 3.6.7'
-  gem 'rails_12factor'
 end

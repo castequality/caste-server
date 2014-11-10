@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "required": ["lookbooks"],
+  "properties": {
+    "lookbooks": {
+      "type": "array",
+      "items": {
+        "required": [
+          "id",
+          "pages"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["url"],
+              "properties": {
+                "url": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
