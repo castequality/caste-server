@@ -11,5 +11,6 @@ CasteServer::Application.routes.draw do
     resources :visuals, only: [:index]
   end
 
+  get "*ember", to: "redis#index", constraints: ->(req){ req.format != :json }
   root to: "redis#index"
 end

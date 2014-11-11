@@ -36,6 +36,8 @@ module CasteServer
       config.autoload_paths << File.join(Rails.root, 'app', loaded)
     end
 
+    config.action_controller.asset_host = ENV.fetch("ASSET_HOST", "")
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

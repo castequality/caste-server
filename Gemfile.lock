@@ -374,6 +374,7 @@ DEPENDENCIES
   rails-assets-lodash
   rails-assets-moment
   rails_12factor
+  rails_serve_static_assets
   recipient_interceptor
   redis
   rich!

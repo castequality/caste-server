@@ -27,9 +27,9 @@ gem 'paperclip'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rack-timeout'
 gem 'rails', '>= 4.0.1'
+gem 'rails_serve_static_assets'
 gem 'rails-assets-lodash'
 gem 'rails-assets-moment'
-gem 'rails_12factor'
 gem 'rich', github: 'bastiaanterhorst/rich'
 gem 'roman-numerals'
 gem 'recipient_interceptor'
@@ -69,4 +69,5 @@ end
 group :staging, :production do
   gem 'heroku_rails_deflate'
   gem 'newrelic_rpm', '>= 3.6.7'
+  gem 'rails_12factor'
 end
