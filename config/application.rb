@@ -33,7 +33,7 @@ module CasteServer
     end
 
     %w[services].each do |loaded|
-      config.autoload_paths << File.join(Rails.root, 'app', loaded)
+      config.autoload_paths << Rails.root.join("app", loaded)
     end
 
     config.action_controller.asset_host = ENV.fetch("ASSET_HOST", "")

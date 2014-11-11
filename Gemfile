@@ -67,6 +67,7 @@ group :test do
 end
 
 group :staging, :production do
+  gem 'sprockets-redirect'
   gem 'heroku_rails_deflate'
   gem 'newrelic_rpm', '>= 3.6.7'
   gem 'rails_12factor'

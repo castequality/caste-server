@@ -301,6 +301,9 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sprockets-redirect (0.2.0)
+      activesupport (>= 3.1.0)
+      rack
     teaspoon (0.7.9)
       railties (>= 3.2.5, < 5)
     thor (0.18.1)
@@ -386,6 +389,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   spring-commands-teaspoon
+  sprockets-redirect
   teaspoon
   timecop
   tumblr_client
