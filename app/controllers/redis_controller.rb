@@ -1,16 +1,18 @@
 class RedisController < ApplicationController
   def index
-    version = params[:version].presence || "current"
+    with_redis do |redis|
+      version = params[:version].presence || "current"
 
-    html_key = "index:#{version}"
+      html_key = "index:#{version}"
 
-    html = redis.get(html_key)
+      html = redis.get(html_key)
 
-    raise ActionController::RoutingError, "#{html_key} not found" if html.blank?
+      raise ActionController::RoutingError, "#{html_key} not found" if html.blank?
 
-    insert_csrf_meta(html)
+      insert_csrf_meta(html)
 
-    render text: html
+      render text: html
+    end
   end
 
   private
@@ -28,13 +30,17 @@ class RedisController < ApplicationController
     html.index("</body>")
   end
 
-  def redis
+  def with_redis
     uri = URI.parse(ENV["REDISTOGO_URL"])
 
-    Redis.new(
+    redis = Redis.new(
       host: uri.host,
       port: uri.port,
       password: uri.password
     )
+
+    yield redis
+
+    redis.quit
   end
 end

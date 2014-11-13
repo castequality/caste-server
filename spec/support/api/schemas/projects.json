@@ -7,19 +7,19 @@
       "items": {
         "required": [
           "id",
-          "name",
+          "numeral",
           "pages",
           "slug"
         ],
         "properties" : {
           "id": { "type": "integer" },
-          "name": { "type": "string" },
+          "numeral": { "type": "string" },
           "slug": { "type": "string" },
           "pages": {
             "type": "array",
             "items": {
               "url": { "type": "string" },
-              "is_video": { "type": "boolean" }
+              "video": { "type": "boolean" }
             }
           }
         }

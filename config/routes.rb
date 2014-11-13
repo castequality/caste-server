@@ -7,7 +7,7 @@ CasteServer::Application.routes.draw do
     resources :posts, only: [:index]
     resources :projects
     resources :lookbooks, only: [:index]
-    resources :splashes, only: [:index]
+    resources :videos, only: [:index]
     resources :visuals, only: [:index]
   end
 

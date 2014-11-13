@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["videos"],
+  "properties": {
+    "videos": {
+      "type": "array",
+      "items": {
+        "required": [
+          "id",
+          "url"
+        ],
+        "properties" : {
+          "id": { "type": "integer" },
+          "url": { "type": "string" }
+        }
+      }
+    }
+  }
+}

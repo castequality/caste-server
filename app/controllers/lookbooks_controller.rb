@@ -1,4 +1,4 @@
-class LookbooksController < ApplicationController
+class LookbooksController < StaticController
   def index
     @lookbooks = build_lookbooks
 
@@ -16,12 +16,5 @@ class LookbooksController < ApplicationController
         { url: image_url("lookbooks/fall2014/5.jpg") },
       ]
     }]
-  end
-
-  def image_url(name)
-    URI.join(
-      root_url,
-      self.class.helpers.asset_url(name),
-    ).to_s
   end
 end
