@@ -1,8 +1,0 @@
-- cache post do
-  article.post id=dom_id(post)
-    h1.name
-      = post.name
-      = time_tag post.published_at.to_date, class: "published-at", pubdate: true
-
-    p.body
-      = post.body.html_safe

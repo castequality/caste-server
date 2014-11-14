@@ -12,13 +12,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/castequality/Flexslider-2-Rails-Gem.git
-  revision: 30ec63b2fb29e618bafa4fcd7f2ecb4965c23648
-  specs:
-    flexslider (2.2.0)
-      sass-rails (>= 3.1.0)
-
-GIT
   remote: git://github.com/castequality/active_admin.git
   revision: 0ee51a437ec4b955f9c3d513ef6a7356df9ded15
   specs:
@@ -74,10 +67,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
-    barber (0.5.0)
-      ember-source
-      execjs
-      handlebars-source (>= 1.0.0.rc.4)
     bcrypt (3.1.7)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
@@ -131,19 +120,6 @@ GEM
       dotenv (= 0.9.0)
     email_validator (1.4.0)
       activemodel
-    ember-data-source (1.0.0.beta.11)
-      ember-source
-    ember-rails (0.15.0)
-      active_model_serializers
-      barber (>= 0.4.1)
-      ember-data-source (>= 1.0.0.beta.5)
-      ember-source (>= 1.1.0)
-      execjs (>= 1.2)
-      handlebars-source (> 1.0.0)
-      jquery-rails (>= 1.0.17)
-      railties (>= 3.1)
-    ember-source (1.8.0)
-      handlebars-source (~> 1.0)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.3.0)
@@ -162,7 +138,6 @@ GEM
       actionpack (>= 3.0)
     fssm (0.2.10)
     google-analytics-rails (0.0.4)
-    handlebars-source (1.3.0)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -234,9 +209,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.1)
       sprockets-rails (~> 2.0.0)
-    rails-assets-jquery-mockjax (1.5.3)
-    rails-assets-lodash (2.4.1)
-    rails-assets-moment (2.8.3)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -260,7 +232,6 @@ GEM
     redis (3.1.0)
     responders (1.0.0)
       railties (>= 3.2, < 5)
-    roman-numerals (0.3.0)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -289,8 +260,6 @@ GEM
     slop (3.4.7)
     spring (1.1.3)
     spring-commands-rspec (1.0.2)
-      spring (>= 0.9.1)
-    spring-commands-teaspoon (0.0.2)
       spring (>= 0.9.1)
     sprockets (2.10.1)
       hike (~> 1.2)
@@ -353,11 +322,7 @@ DEPENDENCIES
   delayed_job_active_record (>= 4.0.0)
   dotenv-rails
   email_validator
-  ember-data-source (= 1.0.0.beta.11)
-  ember-rails
-  ember-source (= 1.8.0)
   factory_girl_rails
-  flexslider!
   foreman
   google-analytics-rails
   heroku_rails_deflate
@@ -373,22 +338,16 @@ DEPENDENCIES
   rack-cors
   rack-timeout
   rails (>= 4.0.1)
-  rails-assets-jquery-mockjax
-  rails-assets-lodash
-  rails-assets-moment
   rails_12factor
   rails_serve_static_assets
   recipient_interceptor
   redis
   rich!
-  roman-numerals
   rspec-rails (>= 2.14)
-  sass-rails
   shoulda-matchers
   simplecov
   spring
   spring-commands-rspec
-  spring-commands-teaspoon
   sprockets-redirect
   teaspoon
   timecop
