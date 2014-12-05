@@ -62,6 +62,15 @@ class ProjectsController < StaticController
         { url: vimeo_url(93339618), video: true },
         { url: image_url("projects/magenta/13.jpg") },
       ]
+    }, {
+      id: 4,
+      numeral: "IV",
+      slug: "vanstyles",
+      pages: [
+        { url: image_url("projects/vanstyles/1.jpg") },
+        { url: vimeo_url(113576844), video: true },
+        { url: image_url("projects/vanstyles/3.jpg") },
+      ]
     }]
   end
 end
