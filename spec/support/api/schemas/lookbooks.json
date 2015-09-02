@@ -18,6 +18,9 @@
               "required": ["url"],
               "properties": {
                 "url": { "type": "string" }
+              },
+              "additionalProperties": {
+                "video": { "type": "boolean" }
               }
             }
           }

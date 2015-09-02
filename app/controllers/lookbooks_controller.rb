@@ -7,14 +7,14 @@ class LookbooksController < StaticController
 
   def build_lookbooks
     [{
-      id: "fall2014",
+      id: "indigo",
       pages: [
-        { url: image_url("lookbooks/traffic/1.jpg") },
-        { url: image_url("lookbooks/traffic/2.jpg") },
-        { url: image_url("lookbooks/traffic/3.jpg") },
-        { url: image_url("lookbooks/traffic/4.jpg") },
-        { url: image_url("lookbooks/traffic/5.jpg") },
-        { url: image_url("lookbooks/traffic/6.jpg") },
+        { url: vimeo_url(138048069), video: true },
+        { url: image_url("lookbooks/indigo/1.jpg") },
+        { url: image_url("lookbooks/indigo/2.jpg") },
+        { url: image_url("lookbooks/indigo/3.jpg") },
+        { url: image_url("lookbooks/indigo/4.jpg") },
+        { url: image_url("lookbooks/indigo/5.jpg") },
       ]
     }]
   end
